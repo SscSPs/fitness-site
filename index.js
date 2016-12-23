@@ -6,12 +6,12 @@ function butt_rot(){
                
     if(x == 0){
         document.getElementById("image").innerHTML = "<img src = 'muscle_back_final.png' usemap='#back'>";
-        x = 1;
+        x = 1;     
         return;
     }  
                 
     if(x == 1){   
-        document.getElementById("image").innerHTML = "<img src = 'muscle_front_final.png' usemap='#front'>";
+        document.getElementById("image").innerHTML = "<img src = 'muscle_front_final.png' usemap='#front' class='map'>";   
         x = 0;
         return;
     }
