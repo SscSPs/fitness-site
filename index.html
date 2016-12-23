@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    
+    <meta charset="utf-8">
+    
+    <head>
+        
+        <script type="text/javascript" src="index.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        
+        <title>Fitness Central</title>
+        
+    </head>
+       
+    <body>
+        <!-- header area with navigation bar and the background image and name of the website -->
+        <header>
+            <h1>Fitness Central</h1>  
+            
+            <!-- Navigation bar, add more after the last li -->
+            <ul>
+                <li><a class="nav_bar" href="#">Register</a></li>
+                <li><a class="nav_bar" href="#">Login</a></li>
+            </ul>
+        </header>    
+    
+        <!-- Image mapping of the front muscle anatomy image -->
+        <map id="front_anatomy" name="front">
+            <area shape="poly" onclick="chest()" href="#" name="l_chest" coords="58,98, 75,91, 94,93, 100,126, 93,139, 78,142, 64,132">
+            <area shape="poly" onclick="chest()" href="#" name="r_chest" coords="113,91, 143,96, 147,124, 133,140, 110,136, 105,116">
+            <area shape="poly" href="#" name="l_shrug" coords="68,79, 89,71, 91,89">
+            <area shape="poly" href="#" name="r_shrug" coords="121,72, 144,81, 116,89">
+            <area shape="poly" href="#" name="l_shoulder" coords="73,91, 63,82, 53,81, 46,86, 39,99, 40,111, 57,109, 56,95">
+            <area shape="poly" href="#" name="r_shoulder" coords="126,89, 142,82, 161,85, 171,98, 173,114, 155,113, 151,98">
+            <area shape="poly" href="#" name="l_arm" coords="41,129, 55,116, 63,135, 62,176, 60,195,42,227, 31,223, 34,171">
+            <area shape="poly" href="#" name="r_arm" coords="160,123, 152,146, 154,177, 160,198, 177,229, 190,224, 185,175, 177,157, 175,128">
+            <area shape="poly" href="#" name="l_leg" coords="74,233, 56,274, 68,334, 68,363, 64,395, 74,448, 90,450, 99,398, 95,376, 96,367, 101,340, 104,308, 105,264">
+            <area shape="poly" href="#" name="r_leg" coords="134,229, 155,267, 145,330, 141,358, 145,388, 130,448, 113,443, 110,389, 114,369, 114,359, 111,338, 110,307, 110,265">
+            <area shape="poly" onclick="core()" href="#" name="core_front" coords="64,156, 82,141, 102,138, 123,143, 144,159, 146,202, 122,233, 90,234, 65,206">
+        </map>
+        
+        <!-- Image mapping for the back muscle anatomy image -->
+        <map id="back_anatomy" name="back">
+            <area shape="poly" href="#" name="upperback" coords="69,95, 113,89, 157,102, 151,156, 75,164">
+            <area shape="poly" href="#" name="lowerback" coords="78,176, 111,171, 150,180, 150,206, 109,222, 76,202">
+            
+        </map>
+        
+        <!-- Content between header and footer -->
+        <div class="musc_anatomy">
+            <center>
+            <table>
+                <tr>
+                    <td><input type="button" value="<" onmouseover="butt_rot()"></td>
+                    <!-- default is set to fornt muscle anatomy image -->
+                    <td id="image"><img src="muscle_front_final.png" usemap="#front"></td> 
+                    <td><input type="button" value=">" onmouseover="butt_rot()"></td>
+                    <td class="info"><h2 id="info_head"></h2><p id="info"></p><br><p id="butt_container"></p></td>
+                </tr>
+            </table>
+            </center>
+        </div>
+        
+        <!-- The footer -->
+        <footer>
+            <hr>
+            <h5>All rights reserved</h5>
+        </footer>
+        
+    </body>
+    
+</html>
