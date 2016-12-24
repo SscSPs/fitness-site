@@ -7,7 +7,8 @@
         
         <script type="text/javascript" src="index.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-        <script src="jquery.maphilight.min.js"></script>S
+        <script src="jquery.maphilight.min.js"></script>
+        <script src="sahil.js"></script>
         
         <script type="text/javascript">
         $(function () {
@@ -23,16 +24,9 @@
     </head>
        
     <body>
-        <!-- header area with navigation bar and the background image and name of the website -->
-        <header>
-            <h1>Fitness Central</h1>  
-            
-            
-            <!-- Navigation bar, add more after the last li -->
-            <ul class="nav_bar" >
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
+        <!-- header area with navigation bar and the background image and name of the website 
+        Will be loaded by JS-->
+        <header id = 'header1'>
         </header>    
     
         <!-- Image mapping of the front muscle anatomy image -->        
@@ -60,7 +54,7 @@
         <!-- Content between header and footer -->
         <div class="musc_anatomy">
             <left>
-            <table border="2">
+            <table border="0">
                 <tr>
                     <td id="image"><img src="muscle_front_final.png" usemap="#front" class="map"></td> 
                     
@@ -74,6 +68,7 @@
         </div>
         
         <script>
+            loadHeader('header1');
             function onmouse()
             {
                   $(function () {

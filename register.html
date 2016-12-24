@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    
+    <head>
+        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+        <script src="jquery.maphilight.min.js"></script>
+        <script src="sahil.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <title>Registration - Fitness Central</title>
+    </head>
+    
+    <body>
+        <header id = 'header1'></header>
+        <p id='a'></p>
+        
+        <div>
+          <h1>Registration</h1>
+
+          <form action="/">
+              <hr>
+          <hr>
+          <input type="text" name="name" id="name" placeholder="Email" required/>
+          <input type="text" name="name" id="name" placeholder="Name" required/>
+          <input type="password" name="name" id="name" placeholder="Password" required/>
+          <div class="gender">
+            <input type="radio" value="None" id="male" name="gender" checked/>
+            <label for="male" class="radio" chec>Male</label>
+            <input type="radio" value="None" id="female" name="gender" />
+            <label for="female" class="radio">Female</label>
+           </div> 
+           <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+           <a href="#" class="button">Register</a>
+          </form>
+        </div>
+
+        <script>
+            loadHeader("header1")
+        </script>
+    </body>
+</html>

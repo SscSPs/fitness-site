@@ -19,9 +19,10 @@ function butt_rot() {
             
 //to display core details on click of the core
 function getInfo(elem){
-    document.getElementById("info_head").innerHTML = "The Core";
+    document.getElementById("info_head").innerHTML = "The "+elem.id;
+    document.getElementById("info_head").width = '200px';
     changeInnerhtmlFromXML(elem, "info");
-    document.getElementById("butt_container").innerHTML = "<a href='core.html'><p id='butt' style='width: 200'>Read More</p></a>";
+    document.getElementById("butt_container").innerHTML = "<a href='"+elem.id+".html' width=200px><p id='butt'>Read More</p></a>";
 }
 
 
