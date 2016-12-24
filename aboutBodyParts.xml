@@ -1,0 +1,24 @@
+<body>
+    <core>
+        <about>This is the information about Core</about>
+    </core>
+    <leg>
+        <about>This is about leg</about>
+    </leg>
+    <arm>
+        <about>This is about arm</about>
+    </arm>
+    <shoulder>
+        <about>This is about shoulders</about>
+    </shoulder>
+    <chest>
+        <about>This is about chest</about>
+    </chest>
+    <upperback>
+        <about>This is about upper back</about>
+    </upperback>
+    <lowerback>
+        <about>This is about lower back</about>
+    </lowerback>
+    
+</body>

@@ -2,15 +2,15 @@
 var x = 0;
             
 //to toggle between images
-function butt_rot(){
-               
-    if(x == 0){
-        document.getElementById("image").innerHTML = "<img src = 'muscle_back_final.png' usemap='#back'>";
+function butt_rot() {
+                //comparision is done with ===. == will work, but === is in the correct syntax
+    if (x === 0) {
+        document.getElementById("image").innerHTML = "<img src = 'muscle_back_final.png' usemap='#back' class='map'>";
         x = 1;     
         return;
     }  
                 
-    if(x == 1){   
+    if (x === 1) {   
         document.getElementById("image").innerHTML = "<img src = 'muscle_front_final.png' usemap='#front' class='map'>";   
         x = 0;
         return;
@@ -18,15 +18,23 @@ function butt_rot(){
 }
             
 //to display core details on click of the core
-function core(){
-        document.getElementById("info_head").innerHTML = "The Core";
-        document.getElementById("info").innerHTML = "About the core";
-        document.getElementById("butt_container").innerHTML = "<p id='butt'><a href='core.html'>Read More</a></p>";
+function getInfo(elem){
+    document.getElementById("info_head").innerHTML = "The Core";
+    changeInnerhtmlFromXML(elem, "info");
+    document.getElementById("butt_container").innerHTML = "<a href='core.html'><p id='butt' style='width: 200'>Read More</p></a>";
 }
 
-function chest(){
-        document.getElementById("info_head").innerHTML = "Chest";
-        document.getElementById("info").innerHTML = "About the chest";
-        document.getElementById("butt_container").innerHTML = "<p id='butt'><a href='#'>Read More</a></p>";
-}
 
+function changeInnerhtmlFromXML(a,elementToChange) {
+    var txt = '';
+    var request = new XMLHttpRequest();
+    request.open("GET", "aboutBodyParts.xml", false);
+    request.send();
+    var xml = request.responseXML;
+    var i;
+    var x = xml.documentElement.childNodes;
+    for (i = 1; i < x.length; i += 2)
+        if(x[i].nodeName === a.id)
+        txt = x[i].textContent + "<br>";
+    document.getElementById(elementToChange).innerHTML = txt;
+}
