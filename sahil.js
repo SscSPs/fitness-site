@@ -8,5 +8,4 @@ function loadHeader(headerId){
     text+='<li><a href="Login.html">Login</a></li>';
     text+='</ul>';
     document.getElementById(headerId).innerHTML = text;
-    console.log(headerId);
 }
