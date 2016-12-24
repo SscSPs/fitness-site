@@ -20,11 +20,15 @@
 
           <form action="/">
               <hr>
-          <hr>
+            <label for="email"style="width:200px;display: inline-block;">Email address</label>
           <input type="text" name="email" id="email" placeholder="Email" required/><br>
+            <label for="name"style="width:200px;display: inline-block;">Your Name</label>
           <input type="text" name="name" id="name" placeholder="Name" required/><br>
+            <label for="password"style="width:200px;display: inline-block;">Password</label>
           <input type="password" name="password" id="password" placeholder="Password" required/><br>
-          <div class="gender">
+            <label for="dob"style="width:200px;display: inline-block;">Date of Birth</label>
+          <input type="date" name="dob" id="dob" placeholder="Password" required/><br>
+          <div class="gender"style="width:200px;display: inline-block;">
             <input type="radio" value="None" id="male" name="gender" checked/>
             <label for="male" chec>Male</label>
             <input type="radio" value="None" id="female" name="gender" />
@@ -32,6 +36,7 @@
            </div> 
            <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
            <input type="button" value="Register" onclick="register();"></input>
+            <p>Already a member? <a href="login.html">Login</a></p>
           </form>
         </div>
 
