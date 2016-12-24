@@ -21,22 +21,24 @@
           <form action="/">
               <hr>
           <hr>
-          <input type="text" name="name" id="name" placeholder="Email" required/>
-          <input type="text" name="name" id="name" placeholder="Name" required/>
-          <input type="password" name="name" id="name" placeholder="Password" required/>
+          <input type="text" name="email" id="email" placeholder="Email" required/><br>
+          <input type="text" name="name" id="name" placeholder="Name" required/><br>
+          <input type="password" name="password" id="password" placeholder="Password" required/><br>
           <div class="gender">
             <input type="radio" value="None" id="male" name="gender" checked/>
-            <label for="male" class="radio" chec>Male</label>
+            <label for="male" chec>Male</label>
             <input type="radio" value="None" id="female" name="gender" />
-            <label for="female" class="radio">Female</label>
+            <label for="female">Female</label>
            </div> 
            <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
-           <a href="#" class="button">Register</a>
+           <input type="button" value="Register" onclick="register();"></input>
           </form>
         </div>
 
         <script>
-            loadHeader("header1")
+            loadHeader("header1");
+            function register(){}
+            
         </script>
     </body>
 </html>
