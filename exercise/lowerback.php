@@ -22,12 +22,13 @@
         <header id = 'header1'>
         </header>  
         <H1>Hey there!</H1>
-        <h2>About us</h2>
+        <h2>Lower Back</h2>
         <div>
-            <p>We are 4 college students who started this site as a project work we needed to make during out college degree.</p>
+            <p>This Page will include exercises for Lower Back.</p>
         </div>
         <script>
             loadHeader("header1");
+            fillThePage("LowerBack");
         </script>
     </body>
 </html>

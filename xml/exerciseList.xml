@@ -1,0 +1,123 @@
+<Body>
+    <bodypart part = "Arms">
+        
+        <difficulty level = "Easy">
+            <exercise name = "Push-Ups">
+                <Reps>5</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Triceps-Dips">
+                <Reps>5</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Mountain Climber">
+                <Reps>10</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Plank">
+                <Reps>1</Reps>
+                <Duration>15s</Duration>
+                <Sets>3</Sets>
+            </exercise>
+        </difficulty>
+        
+        <difficulty level = "Medium">
+            <exercise name = "Push-Ups">
+                <Reps>10</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Triceps-Dips">
+                <Reps>10</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Mountain Climber">
+                <Reps>20</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Plank">
+                <Reps>1</Reps>
+                <Duration>20s</Duration>
+                <Sets>3</Sets>
+            </exercise>
+        </difficulty>
+        
+        <difficulty level = "Hard">
+            <exercise name = "Push-Ups">
+                <Reps>25</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Triceps-Dips">
+                <Reps>25</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Mountain Climber">
+                <Reps>40</Reps>
+                <Duration></Duration>
+                <Sets>3</Sets>
+            </exercise>
+            <exercise name = "Plank">
+                <Reps>1</Reps>
+                <Duration>30s</Duration>
+                <Sets>3</Sets>
+            </exercise>
+        </difficulty>
+        
+    </bodypart>
+    
+    <bodypart part = "Chest">
+        <difficulty level = "Easy">
+        </difficulty>
+        <difficulty level = "Medium">
+        </difficulty>
+        <difficulty level = "Hard">
+        </difficulty>
+    </bodypart>
+    <bodypart part = "Abs">
+        <difficulty level = "Easy">
+        </difficulty>
+        <difficulty level = "Medium">
+        </difficulty>
+        <difficulty level = "Hard">
+        </difficulty>
+    </bodypart>
+    <bodypart part = "LowerBack">
+        <difficulty level = "Easy">
+        </difficulty>
+        <difficulty level = "Medium">
+        </difficulty>
+        <difficulty level = "Hard">
+        </difficulty>
+    </bodypart>
+    <bodypart part = "UpperBack">
+        <difficulty level = "Easy">
+        </difficulty>
+        <difficulty level = "Medium">
+        </difficulty>
+        <difficulty level = "Hard">
+        </difficulty>
+    </bodypart>
+    <bodypart part = "Legs">
+        <difficulty level = "Easy">
+        </difficulty>
+        <difficulty level = "Medium">
+        </difficulty>
+        <difficulty level = "Hard">
+        </difficulty>
+    </bodypart>
+    <bodypart part = "Shoulders">
+        <difficulty level = "Easy">
+        </difficulty>
+        <difficulty level = "Medium">
+        </difficulty>
+        <difficulty level = "Hard">
+        </difficulty>
+    </bodypart>
+</Body>

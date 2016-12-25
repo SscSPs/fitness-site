@@ -23,42 +23,43 @@
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    
+
     <head>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-        <script src="js/jquery.maphilight.min.js"></script>
-        <script src="js/sahil.js"></script>
-        
+        <script src="/js/jquery.maphilight.min.js"></script>
+        <script src="/js/sahil.js"></script>
+
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="css/index.css" rel="stylesheet">
+        <link href="/css/index.css" rel="stylesheet">
         <title>Login - Fitness Central</title>
     </head>
-    
-    <body>
-        <header id = 'header1'></header>
-        
-        <div>
-          <h1>Login</h1>
 
-          <form action="login.php" method="post">
-              <?php
+    <body>
+        <header id='header1'></header>
+
+        <div>
+            <h1>Login</h1>
+
+            <form action="login.php" method="post">
+                <?php
               if(isset($_SESSION))
                   echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
                 ?>
-              <hr>
-            <label for="email" style="width:200px;display: inline-block;">Email address</label>
-          <input type="text" name="email" id="email" placeholder="Email" required/><br>
-            <label for="password" style="width:200px;display: inline-block;">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" required/><br>
-           <input type="submit" name="login" value="Login"/>
-            <p>Not a member? <a href="register.php">Sign Up</a></p>
-          </form>
+                    <hr>
+                    <label for="email" style="width:200px;display: inline-block;">Email address</label>
+                    <input type="text" name="email" id="email" placeholder="Email" required/><br>
+                    <label for="password" style="width:200px;display: inline-block;">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required/><br>
+                    <input type="submit" name="login" value="Login" />
+                    <p>Not a member? <a href="register.php">Sign Up</a></p>
+            </form>
         </div>
 
         <script>
             loadHeader("header1");
-            
+
         </script>
     </body>
+
 </html>
