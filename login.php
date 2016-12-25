@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    $_SESSION['message'] = '';
+    $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+    
+    if(isset($_POST['login'])){
+        $email = mysqli_real_escape_string($db, $_POST['email']);
+        $password = mysqli_real_escape_string($db, $_POST['password']);
+        
+        $password = md5($password);
+        $sql1 = $db->query("SELECT * FROM Project_Customer_Login WHERE email = '$email' AND passhash = '$password'");
+        if(mysqli_num_rows($sql1) == 1 ){
+            $_SESSION['message'] = "Login Successful";
+            $_SESSION['email'] = $email;
+            header("location: /user_access_area/welcomepage.php");
+        }
+        else{
+            $_SESSION['message'] = "Some error occured. Please check your email and password.";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
@@ -20,13 +42,17 @@
         <div>
           <h1>Login</h1>
 
-          <form action="/">
+          <form action="login.php" method="post">
+              <?php
+              if(isset($_SESSION))
+                  echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
+                ?>
               <hr>
             <label for="email" style="width:200px;display: inline-block;">Email address</label>
           <input type="text" name="email" id="email" placeholder="Email" required/><br>
             <label for="password" style="width:200px;display: inline-block;">Password</label>
           <input type="password" name="password" id="password" placeholder="Password" required/><br>
-           <input type="button" value="Login" onclick="login();"></input>
+           <input type="submit" name="login" value="Login"/>
             <p>Not a member? <a href="register.php">Sign Up</a></p>
           </form>
         </div>
