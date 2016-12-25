@@ -22,7 +22,7 @@
         
         
         <script>
-            loadHeader("header1");
+            loadHeaderAdmin("header1");
             
         </script>
     </body>
