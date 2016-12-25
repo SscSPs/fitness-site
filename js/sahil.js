@@ -18,11 +18,17 @@ function loadHeaderRegistered(headerID){
     document.getElementById(headerId).innerHTML = text;
 }
 
-function loadHeaderaAdmin(headerID){
-    var text;
+function loadHeaderAdmin(headerID){
+    var text = '';
+    text+='<h1><a style="color: white; text-decoration: none;" href="/superuserArea/adminhome.php">Admin Pannel - Fitness Central</a></h1>';
+    text+='<ul >';
+    text+='<a style="color: white; text-decoration: none;" href="/superuserArea/adminhome.php"><li>Home</li></a>';
+    text+='<a style="color: white; text-decoration: none;" href="/superuserArea/Exercises.php"><li>Exercises</li></a>';
+    text+='<a style="color: white; text-decoration: none;" href="/superuserArea/Users.php"><li>Users</li></a>';
+    text+='<a style="color: white; text-decoration: none;" href="/superuserArea/PersonalDetails.php"><li>Personal Details</li></a>';
+    text+='<a style="color: RED; text-decoration: none;" href="/superuserArea/LOGOUT.php"><li>LOG OUT</li></a>';
+    text+='</ul>';
     
-    //code to fill up the header here
-    
-    document.getElementById(headerId).innerHTML = text;
+    document.getElementById(headerID).innerHTML = text;
     
 }
