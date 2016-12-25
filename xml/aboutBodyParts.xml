@@ -1,24 +1,24 @@
 <body>
-    <core>
+    <Core>
         <about>The Core of the body is broadly considered to be the torso. Functional movements are highly dependent on this part of the body, and lack of core muscular development can result in a predisposition to injury.</about>
-    </core>
-    <leg>
+    </Core>
+    <Legs>
         <about>This is about leg</about>
-    </leg>
-    <arm>
+    </Legs>
+    <Arms>
         <about>This is about arm</about>
-    </arm>
-    <shoulder>
+    </Arms>
+    <Shoulders>
         <about>This is about shoulders</about>
-    </shoulder>
-    <chest>
-        <about>This is about chest</about>
-    </chest>
-    <upperback>
+    </Shoulders>
+    <Chest>
+        <about>The Chest includes the thoracic cavity and the thoracic wall. It contains organs including the heart, lungs, and other internal structures. Muscles in chest increases the size of chest and strength.</about>
+    </Chest>
+    <UpperBack>
         <about>This is about upper back</about>
-    </upperback>
-    <lowerback>
+    </UpperBack>
+    <LowerBack>
         <about>This is about lower back</about>
-    </lowerback>
+    </LowerBack>
     
 </body>
