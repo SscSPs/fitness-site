@@ -71,10 +71,13 @@
             loadHeader('header1');
             function onmouse()
             {
-                  $(function () {
-                        $('.map').maphilight();
-                  });
-                  butt_rot();
+                $(function () {
+                    $('.map').maphilight();
+                });
+                document.getElementById("info_head").innerHTML = "";
+                document.getElementById("info").innerHTML = "";
+                document.getElementById("butt_container").innerHTML = '';
+                butt_rot();
             }
         </script>
         

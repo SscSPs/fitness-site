@@ -21,7 +21,7 @@ function butt_rot() {
 function getInfo(elem){
     document.getElementById("info_head").innerHTML = "The "+elem.id;
     changeInnerhtmlFromXML(elem, "info");
-    document.getElementById("butt_container").innerHTML = "<a href='"+elem.id+".html' style='color: #ffffff; text-decoration: none;'><p id='butt'>Read More</p></a>";
+    document.getElementById("butt_container").innerHTML = "<a href='/exercise/"+elem.id+".php' style='color: #ffffff; text-decoration: none;'><p id='butt'>See Exercises</p></a>";
 }
 
 

@@ -95,7 +95,7 @@
             <input type="radio" value="None" id="other" name="gender" />
             <label for="female">Other</label>
            </div> 
-           <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+           <p>By clicking Register, you agree on our <a href="/tac.html">terms and condition</a>.</p>
            <input type="submit" name="register" value="Register"/>
             <p>Already a member? <a href="login.php">Login</a></p>
           </form>
