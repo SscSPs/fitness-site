@@ -37,7 +37,6 @@
     
     <body>
         <header id = 'header1'></header>
-        <p id='a'></p>
         
         <div>
           <h1>Login</h1>
@@ -59,7 +58,6 @@
 
         <script>
             loadHeader("header1");
-            function login(){}
             
         </script>
     </body>
