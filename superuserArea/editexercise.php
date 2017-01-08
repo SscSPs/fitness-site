@@ -3,7 +3,7 @@ $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 if ($db->connect_error) {
     die("Connection failed: " . $db ->connect_error);
 } 
-echo '<form action="Exercises.php" method="post"><hr>';
+echo '<form action="Exercises.php" method="post">';
 echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
 
 //fetch list of body parts
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 <html>
     <body>
     
-        <script>            
+        <script>
             function loadform(task, tagname) {
                 var text = '';
                 if (task === "edit") {
