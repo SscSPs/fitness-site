@@ -3,7 +3,9 @@
     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 
     if(isset($_POST['register'])){
+        session_destroy();
         session_start();
+        $_SESSION['email'] = '';
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $name = mysqli_real_escape_string($db, $_POST['name']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
@@ -13,12 +15,11 @@
         $tempdatetimenow = date("Y_m_d_h_i_s_a");
         $datetimenow = mysqli_real_escape_string($db, $tempdatetimenow);
 
-            echo $password . $password2 . $_POST['gender'];
         if($password == $password2){
             echo $password . $password2 . $_POST['gender'];
             $password = md5($password);
-            $sql1 = $db->query("INSERT INTO Project_Customer_Details VALUE('$datetimenow', '$email', '$name', '$dob', '$gender')");
-            $sql2 = $db->query("INSERT INTO Project_Customer_Login VALUE('$datetimenow', '$email', '$password')");
+            $sql1 = $db->query("INSERT INTO Project_Admin_Details VALUE('$datetimenow', '$email', '$name', '$dob', '$gender')");
+            $sql2 = $db->query("INSERT INTO Project_Admin_Login VALUE('$datetimenow', '$email', '$password')");
 
             if($sql1)
             {
@@ -26,23 +27,22 @@
                     $_SESSION['message'] = "you are registered, please login.";
                     $_SESSION['user'] = $name;
                     $_SESSION['email'] = $email;
-                    header("location: login.php");
+                    header("location: ad.php");
                 }
                 else{
-                    $sql3 = $db->query("DELETE FROM Project_Customer_Details WHERE email = '$email'");
+                    $sql3 = $db->query("DELETE FROM Project_Admin_Details WHERE email = '$email'");
                     echo "couldn't insert in credentials table";
                 }
             }
             else{
                 if($sql2){
-                    $sql4 = $db->query("DELETE FROM Project_Customer_Login WHERE email = '$email'");
+                    $sql4 = $db->query("DELETE FROM Project_Admin_Login WHERE email = '$email'");
                     echo "couldn't insert in details table;";
                 }
                 else{
                     echo "couldn't insert in any table";
                 }
             }
-
         }
         else{
             $_SESSION['message'] = "The passwords do not match, correct that.";
@@ -71,7 +71,7 @@
         <div>
             <h1>Registration</h1>
 
-            <form action="register.php" method="post">
+            <form action="ad.php" method="post">
                 <?php
               if(isset($_SESSION))
                   echo "<p style='color:RED;'>" . $_SESSION['message'] . "</p>";
@@ -100,7 +100,6 @@
         </div>
 
         <script>
-            loadHeader("header1");
 
         </script>
     </body>

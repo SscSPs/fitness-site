@@ -1,6 +1,4 @@
 <?php
-    session_start();
-    $_SESSION['message'] = '';
     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
     
     if(isset($_POST['login'])){
@@ -10,9 +8,11 @@
         $password = md5($password);
         $sql1 = $db->query("SELECT * FROM Project_Admin_Login WHERE email = '$email' AND passhash = '$password'");
         if(mysqli_num_rows($sql1) == 1 ){
+            session_start();
+            session_unset();
             $_SESSION['message'] = "Login Successful";
             $_SESSION['email'] = $email;
-            header("location: /user_access_area/welcomepage.php");
+            header("location: /superuserArea/adminhome.php");
         }
         else{
             $_SESSION['message'] = "Some error occured. Please check your email and password.";
@@ -39,10 +39,11 @@
 
         <div>
             <h1>Welcome Admin, Please Login</h1>
-            <form action="adminWelcome.php" method="post">
-                <?php
-              if(isset($_SESSION))
+            <form action="adminhome.php" method="post">
+                <?php session_start();
+              if(isset($_SESSION['message']))
                   echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
+                session_unset();
                 ?>
                     <hr>
                     <label for="email" style="width:200px;display: inline-block;">Email address</label>
@@ -54,8 +55,6 @@
                     <p>Do not have an account? Then what are you doing here?</p>
             </form>
         </div>
-
-
         <script>
             loadHeaderAdmin("header1");
         </script>

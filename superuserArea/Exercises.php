@@ -1,4 +1,12 @@
 <?php
+if(session_status() != 2)
+{
+  $_SESSION['message'] = "Login First";
+  header("location: /superuserArea/adminWelcome.php");
+}
+else{
+
+}
 
 ?>
 <!DOCTYPE HTML>
@@ -19,15 +27,19 @@
 
     <body>
         <header id = 'header1'></header>
-
-            <?php
-          if(isset($_SESSION))
-              echo "<p style='color:RED;'>" . $_SESSION['message'] . "</p>";
-            ?>
+        <ul>
+          <li onclick = "visitlink(this);">Add Exercise</li>
+          <li>Edit existig Exercise</li>
+        </ul>
 
         <script>
-            loadHeaderRegistered('header1');
-
+            loadHeaderRegistered("header1");
+            function visitlink(){
+              if(this.text == "Add Exercise")
+              {
+                openform();
+              }
+            }
         </script>
     </body>
 </html>

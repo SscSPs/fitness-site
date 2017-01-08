@@ -15,7 +15,7 @@ function loadHeaderRegistered(headerID) {
 
     //code to fill up the header here
 
-    document.getElementById(headerId).innerHTML = text;
+    document.getElementById(headerID).innerHTML = text;
 }
 
 function loadHeaderAdmin(headerID) {
@@ -26,7 +26,7 @@ function loadHeaderAdmin(headerID) {
     text += '<a style="color: white; text-decoration: none;" href="/superuserArea/Exercises.php"><li>Exercises</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/superuserArea/Users.php"><li>Users</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/superuserArea/PersonalDetails.php"><li>Personal Details</li></a>';
-    text += '<a style="color: RED; text-decoration: none;" href="/superuserArea/LOGOUT.php"><li>LOG OUT</li></a>';
+    text += '<a style="color: RED; text-decoration: none;" href="/superuserArea/LOGOUT.php" onmouseover = ><li>LOG OUT</li></a>';
     text += '</ul>';
 
     document.getElementById(headerID).innerHTML = text;
