@@ -10,9 +10,11 @@
         if(mysqli_num_rows($sql1) == 1 ){
             session_start();
             session_unset();
+            session_destroy();
+            session_start();
             $_SESSION['message'] = "Login Successful";
             $_SESSION['email'] = $email;
-            header("location: /superuserArea/adminhome.php");
+            echo $email;
         }
         else{
             $_SESSION['message'] = "Some error occured. Please check your email and password.";
@@ -35,7 +37,7 @@
     </head>
 
     <body>
-        <header id='header1'>asd</header>
+        <header id='header1'></header>
 
         <div>
             <h1>Welcome Admin, Please Login</h1>
@@ -51,7 +53,7 @@
                     <label for="password" style="width:200px;display: inline-block;">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password" required/><br>
                     <input type="submit" name="login" value="Login" />
-                    <p>Forgot password? Contact your supervisor.</p>
+                    <p>Forgot password? Contact someone with authority.</p>
                     <p>Do not have an account? Then what are you doing here?</p>
             </form>
         </div>

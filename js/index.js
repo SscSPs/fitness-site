@@ -3,7 +3,7 @@ var x = 0;
 
 //to toggle between images
 function butt_rot() {
-    //=== is used to check if they are exactly the same, i.e. same data type, and value. == will work, but === is in the correct syntax
+    //=== is used to check if they are exactly the same, i.e. same data type, and value. == will work, but === is in better
     if (x === 0) {
         document.getElementById("image").innerHTML = "<img src = 'images/muscle_back_final.png' usemap='#back' class='map'>";
         x = 1;

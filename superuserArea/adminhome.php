@@ -37,7 +37,7 @@ else{
         </ul>
 
         <script>
-            loadHeaderRegistered("header1");
+            loadHeaderAdmin("header1");
             function visitlink(){
               if(this.text == "Add Exercise")
               {
