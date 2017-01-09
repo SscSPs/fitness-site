@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['email']))
+if(!isset($_SESSION['authenticated']))
 {
       echo "<p style='color:RED;'>" . session_status() . "</p>";
       echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(session_status() != 2)
+if(!isset($_SESSION['authenticated']))
 {
   $_SESSION['message'] = "Login First";
   header("location: /superuserArea/adminWelcome.php");

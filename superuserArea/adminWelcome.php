@@ -1,10 +1,10 @@
 <?php
     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
-    
+
     if(isset($_POST['login'])){
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
-        
+
         $password = md5($password);
         $sql1 = $db->query("SELECT * FROM Project_Admin_Login WHERE email = '$email' AND passhash = '$password'");
         if(mysqli_num_rows($sql1) == 1 ){
@@ -14,12 +14,13 @@
             session_start();
             $_SESSION['message'] = "Login Successful";
             $_SESSION['email'] = $email;
+            $_SESSION['authenticated'] = 1;
             echo $email;
         }
         else{
             $_SESSION['message'] = "Some error occured. Please check your email and password.";
         }
-    }  
+    }
 ?>
 
 <!DOCTYPE HTML>
