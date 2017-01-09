@@ -2,10 +2,10 @@
 session_start();
 if(!isset($_SESSION['authenticated']))
 {
-      echo "<p style='color:RED;'>" . session_status() . "</p>";
-      echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
-  $_SESSION['message'] = "Login First";
-      echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
+  echo '<pre>';
+  var_dump($_SESSION);
+  echo '</pre>';
+  $_SESSION['message'] = "asd";
 }
 else{
   if(isset($_SESSION))

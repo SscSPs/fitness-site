@@ -2,29 +2,30 @@
 $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 if ($db->connect_error) {
     die("Connection failed: " . $db ->connect_error);
-} 
-echo '<form action="Exercises.php" method="post">';
-echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
-
+}
 //fetch list of body parts
-    $sql = "SELECT id, name, number_of_exercise FROM project_body_parts";
-    $result = $db->query($sql);
+$sql = "SELECT id, name, number_of_exercise FROM project_body_parts";
+$result = $db->query($sql);
 if ($result->num_rows > 0) {
+    echo '<form action="editexercise.php" method="post">';
+    echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
     echo '<select>';
         while($row = $result->fetch_assoc()) {
             echo "<option value=" . $row["id"] . ">" . $row["name"] . "</option>";
         }
+
     echo '</select>';
 }
-
-
+else {
+  echo "Add some body parts first.";
+}
 
 ?>
 
 <!DOCTYPE html>
 <html>
     <body>
-    
+
         <script>
             function loadform(task, tagname) {
                 var text = '';
@@ -48,4 +49,3 @@ if ($result->num_rows > 0) {
         </script>
     </body>
 </html>
-

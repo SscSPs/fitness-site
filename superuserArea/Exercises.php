@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['authenticated']))
+if(isset($_SESSION['authenticated']))
 {
   $_SESSION['message'] = "Login First";
   header("location: /superuserArea/adminWelcome.php");
@@ -27,10 +27,10 @@ else{
 
     <body>
         <header id='header1'></header>
-        <div>
+        <div class="list">
             <div style="width: 500px; margin-left:0; margin-right:auto; float:left;">
                 <h2>Exercises</h2>
-                <ul class="list" style="background: rgba(0,0,0,0);font-size: auto;padding:auto;text-aligh:auto;display:auto;" >
+                <ul style="background: rgba(0,0,0,0);font-size: auto;padding:auto;text-aligh:auto;display:auto;" >
                     <li onClick="visitlink(this);">Add Exercise</li>
                     <li onClick="visitlink(this);">Edit existig Exercise</li>
                 </ul>
