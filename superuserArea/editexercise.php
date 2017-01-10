@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
   echo '<form action="addexercise.php" method="post">';
   echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
   echo '<select name="BodyPart" id="BodyPart" onchange="bodypartChanged(this)">';
-  while($row = $result->fetch_assoc()) {
+  while($row = $result->fetch_assoc()) {  //bosyy part name.
     echo "<script>";
     echo 'partsarray.push("' . $row["name"] . '");';
     echo "var " . $row["name"] . " = [];";
@@ -25,14 +25,17 @@ if ($result->num_rows > 0) {
       echo "hidedivision();";
     }
     else {
-      while($row2 = $result2->fetch_assoc()) {
+      while($row2 = $result2->fetch_assoc()) {  //exercise table.
         echo $row["name"] . ".push(\"" . $row2["name"] . "\");";
-
-        echo "console.log('" . $row["name"] . " _ " . $row2["name"] ."') ;";
+        echo "var ". $row2["id"] . "= [];";
+        echo $row2["id"] . '.push("' . $row2["instrument"] .'");';
+        echo $row2["id"] . '.push("' . $row2["videoAddress"] .'");';
+        echo $row2["id"] . '.push("' . $row2["about"] .'");';
+        echo $row2["id"] . '.push("' . $row2["moreInfo"] .'");';
       }
     }
     echo "</script>";
-    echo "<option value=" . $row["name"] . ">" . $row["name"] . "</option>";
+    echo '<br><option value="' . $row["name"] . '">' . $row["name"] . "</option>";
   }
   echo '</select>';
   echo '<br><label for="exerciseName" style="width:200px;display: inline-block;">Exercise Name</label>';
@@ -59,21 +62,33 @@ else {
 
 echo "
 <script>
+function hidedivision(){
+  division.style.visibility = 'hidden';;
+}
+function showdivision(){
+  division.style.visibility = 'visible';
+}
 function bodypartChanged(selfobj){
   var text = '';
   var tempbodypart = eval(selfobj.value);
 for(i=0; i<tempbodypart.length;i++){
   text += \"<option value='\" + tempbodypart[i] + \"'>\" + tempbodypart[i] + \"</option>\";
 }
-  exerciseChanged(tempbodypart[0]);
+  exerciseChanged(tempbodypart[0], selfobj.value);
   exerciseName.innerHTML = text;
 }
-function exerciseChanged(){
-  showdivision();
-  var abt;
-  var vidlnk;
-  var instr;
-  var mr;
+function exerciseChanged(exercisename, bodypart){
+  if(exercisename != '')
+    showdivision();
+  else{
+    hidedivision();
+    return;
+  }
+  var tempnode = eval(bodypart.replace(/\s/g,'') + '_' + exercisename.replace(/\s/g,''));
+  var instr = tempnode[0];
+  var vidlnk = tempnode[1];
+  var abt = tempnode[2];
+  var mr = tempnode[3];
 
   about.value = abt;
   videoLink.value = vidlnk;
@@ -81,21 +96,9 @@ function exerciseChanged(){
   more.value = mr;
 
 }
-
-function hidedivision(){
-  division.style.visibility = 'hidden';;
-}
-function showdivision(){
-  division.style.visibility = 'visible';
-}
+if(exerciseName.value == '')
+  hidedivision();
 
 </script>";
 
 ?>
-
-<!DOCTYPE html>
-<html>
-    <body>
-
-    </body>
-</html>
