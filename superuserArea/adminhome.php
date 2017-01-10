@@ -1,7 +1,15 @@
 <?php
 session_start();
+$db = mysqli_connect("localhost", "root", "", "Project_fitness");
+
 if(isset($_SESSION['authenticated']))
 {
+  $nameselectofuser = "SELECT name FROM project_admin_details WHERE email = 'sscsps@gmail.com'";
+
+  $result = $db->query($nameselectofuser);
+  $value = $result->fetch_assoc();
+  echo $result->num_rows;
+  $_SESSION['usersname'] = $value["name"];
 
 }
 else{
@@ -27,19 +35,15 @@ else{
 
     <body>
         <header id = 'header1'></header>
-        <ul>
-          <li onclick = "visitlink(this);">Add Exercise</li>
-          <li>Edit existig Exercise</li>
-        </ul>
+            <?php
+          if(isset($_SESSION['message']))
+              echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
+              $_SESSION['message']="";
+            ?>
+            <h1>Hello <?php echo $_SESSION['usersname']?></h1>
 
         <script>
             loadHeaderAdmin("header1");
-            function visitlink(){
-              if(this.text == "Add Exercise")
-              {
-                openform();
-              }
-            }
         </script>
     </body>
 </html>
