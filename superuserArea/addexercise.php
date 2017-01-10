@@ -41,23 +41,22 @@ if(isset($_POST['add'])){
   $noSpaceBodyPart = preg_replace('/\s+/', '', $BodyPart);
   $noSpaceExerciseName = preg_replace('/\s+/', '', $exerciseName);
   $id = mysqli_real_escape_string($db, $noSpaceBodyPart."_".$noSpaceExerciseName);
-
-$checkExercise = "SELECT * FROM project_exercises_list where id = '$id'";
-$result2 = $db->query($checkExercise);
-if ($result2->num_rows == 0) {
-  $enterExercise = "INSERT INTO project_exercises_list VALUE('$id', '$exerciseName', '$BodyPart', '$instrument', '$videoLink', '$about', '$more')";
-  $resultentry = $db->query($enterExercise);
-  if($resultentry === TRUE){
-    echo "Entry Successful";
+  //check if this already exists.
+  $checkExercise = "SELECT * FROM project_exercises_list where id = '$id'";
+  $result2 = $db->query($checkExercise);
+  if ($result2->num_rows == 0) {
+    $enterExercise = "INSERT INTO project_exercises_list VALUE('$id', '$exerciseName', '$BodyPart', '$instrument', '$videoLink', '$about', '$more')";
+    $resultentry = $db->query($enterExercise);
+    if($resultentry === TRUE){
+      echo "Entry Successful";
+    }
+    else {
+      echo "some error occured<br>" . $conn->error;
+    }
   }
   else {
-    echo "some error occured<br>" . $conn->error;
+    echo $exerciseName . " already exists under " . $BodyPart;
   }
-
-
-}else {
-  echo $exerciseName . " already exists under " . $BodyPart;
-}
 }
 
 ?>
