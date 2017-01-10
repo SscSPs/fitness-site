@@ -46,9 +46,13 @@ if(isset($_POST['add'])){
   $checkExercise = "SELECT * FROM project_exercises_list where id = '$id'";
   $result2 = $db->query($checkExercise);
   if ($result2->num_rows == 0) {
+    //enter data into exercise table
     $enterExercise = "INSERT INTO project_exercises_list VALUE('$id', '$exerciseName', '$BodyPart', '$instrument', '$videoLink', '$about', '$more')";
     $resultentry = $db->query($enterExercise);
-    if($resultentry === TRUE){
+    //update number of exercise in body parts table.
+    $bodypartupdate = "UPDATE project_body_parts set number_of_exercise = number_of_exercise + 1 WHERE name = $BodyPart";
+    $bodypartresult = $db->query($bodypartupdate);
+    if($resultentry === TRUE && $bodypartresult === TRUE){
       echo "Entry Successful";
     }
     else {

@@ -1,15 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['authenticated']))
+if(isset($_SESSION['authenticated']))
 {
-  echo '<pre>';
-  var_dump($_SESSION);
-  echo '</pre>';
-  $_SESSION['message'] = "asd";
+
 }
 else{
-  if(isset($_SESSION))
-      echo "<p style='color:#666666;'>" . $_SESSION['message']. "</p>";
+  header("Location: ./");
 }
 
 ?>

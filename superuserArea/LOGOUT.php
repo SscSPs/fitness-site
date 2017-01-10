@@ -7,5 +7,5 @@
         session_start();
         $_SESSION['message'] = "You have successfully logged out.";
     }
-    header("location: adminWelcome.php");
+    header("location: ./");
 ?>

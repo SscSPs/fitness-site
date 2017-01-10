@@ -1,5 +1,9 @@
 <?php
     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+    session_start();
+if(isset($_SESSION['authenticated'])){
+  header("Location: ./adminhome.php");
+}
 
     if(isset($_POST['login'])){
         $email = mysqli_real_escape_string($db, $_POST['email']);
@@ -7,14 +11,11 @@
 
         $password = md5($password);
         $sql1 = $db->query("SELECT * FROM Project_Admin_Login WHERE email = '$email' AND passhash = '$password'");
-        if(mysqli_num_rows($sql1) == 1 ){
-            session_start();
-            session_unset();
-            session_destroy();
-            session_start();
+        if($sql1->num_rows > 0 ){
             $_SESSION['message'] = "Login Successful";
             $_SESSION['email'] = $email;
             $_SESSION['authenticated'] = 1;
+            header("Location: ./adminhome.php");
             echo $email;
         }
         else{
@@ -42,11 +43,10 @@
 
         <div>
             <h1>Welcome Admin, Please Login</h1>
-            <form action="adminhome.php" method="post">
-                <?php session_start();
+            <form action="./" method="post">
+                <?php
               if(isset($_SESSION['message']))
                   echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
-                session_unset();
                 ?>
                     <hr>
                     <label for="email" style="width:200px;display: inline-block;">Email address</label>
