@@ -26,6 +26,7 @@ if ($result->num_rows > 0) {
     echo '<textarea name="more" id="more" rows="3" cols="25" placeholder="in format \'attributename:data.\'(followed by fullstop)"></textarea>';
 
     echo '<input type="submit" name="add" value="Add Exercise" />';
+    echo '</form>';
 }
 else {
   echo "Add some body parts first.";
