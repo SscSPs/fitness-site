@@ -9,7 +9,7 @@ $result = $db->query($fetchBodyParts);
 if ($result->num_rows > 0) {
     echo '<form action="addexercise.php" method="post">';
     echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
-    echo '<select name="BodyPart" id="BodyPart"';
+    echo '<select name="BodyPart" id="BodyPart">';
     while($row = $result->fetch_assoc()) {
       echo "<option value=" . $row["name"] . ">" . $row["name"] . "</option>";
     }
