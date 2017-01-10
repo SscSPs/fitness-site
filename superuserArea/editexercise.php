@@ -4,17 +4,22 @@ if ($db->connect_error) {
     die("Connection failed: " . $db ->connect_error);
 }
 //fetch list of body parts
-$sql = "SELECT id, name, number_of_exercise FROM project_body_parts";
-$result = $db->query($sql);
+$fetchBodyParts = "SELECT id, name, number_of_exercise FROM project_body_parts";
+$result = $db->query($fetchBodyParts);
 if ($result->num_rows > 0) {
     echo '<form action="editexercise.php" method="post">';
     echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
     echo '<select>';
-        while($row = $result->fetch_assoc()) {
-            echo "<option value=" . $row["id"] . ">" . $row["name"] . "</option>";
-        }
-
+    while($row = $result->fetch_assoc()) {
+      echo "<option value=" . $row["id"] . ">" . $row["name"] . "</option>";
+    }
     echo '</select>';
+    echo '<br><label for="exerciseName" style="width:200px;display: inline-block;">Exercise Name</label>';
+    echo '<input type="text" name="exerciseName" id="exerciseName" placeholder="Exercise Name" required/><br>';
+    echo '<br><label for="exerciseName" style="width:200px;display: inline-block;">Exercise Name</label>';
+    echo '<input type="text" name="exerciseName" id="exerciseName" placeholder="Exercise Name" required/><br>';
+
+    echo '<input type="submit" name="add" value="Add Exercise" />';
 }
 else {
   echo "Add some body parts first.";
