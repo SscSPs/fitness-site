@@ -1,3 +1,6 @@
+<?php
+         session_start();   
+?>
 <!DOCTYPE html>
 <html>
 
@@ -27,8 +30,13 @@
             <p>We are 4 college students who started this site as a project work we needed to make during out college degree.</p>
         </div>
         <script>
-            loadHeader("header1");
-
+            <?php 
+                if(isset($_SESSION['email'])) 
+                {
+                    echo "loadHeaderRegistered('header1');";
+                }
+                else echo "loadHeader('header1');";
+            ?>
         </script>
     </body>
 

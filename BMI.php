@@ -1,5 +1,7 @@
+<?php
+         session_start();   
+?>
 <!DOCTYPE HTML>
-
 <html>
     <meta charset="utf-8">
 
@@ -16,7 +18,7 @@
     </head>
 
     <body>
-        <header id = 'header3'></header>
+        <header id = 'header1'></header>
 
         <div class="bmi_calc">
             <center>
@@ -52,6 +54,13 @@
            
         
         <script>
+            <?php 
+                if(isset($_SESSION['email'])) 
+                {
+                    echo "loadHeaderRegistered('header1');";
+                }
+                else echo "loadHeader('header1');";
+            ?>
             
             function bmi_calc(){
                 
@@ -91,8 +100,6 @@
                 document.getElementById("result").innerHTML = "Your BMI is: <b  style='color: coral;'>" + bmi + "</b> which is considered <b  style='color: coral;'>" + prompt_text + "</b> BMI.";
                 }
             }
-            
-            loadHeader('header3');
 
         </script>
     </body>
