@@ -1,10 +1,13 @@
 <?php
         session_start();
-        $_SESSION['message'] = '';
-        $user = $_SESSION['email'];
-        $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+        if(isset($_SESSION['email']))
+        {    
+            $_SESSION['message'] = '';
+            $user = $_SESSION['email'];
+            $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 
-        $sql1 = $db->query("SELECT name FROM Project_Customer_details WHERE email = '$user'");
+            $sql1 = $db->query("SELECT name FROM Project_Customer_details WHERE email = '$user'");
+        }
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +69,7 @@
         </map>
 
         <?php
-        echo "Welcome ".$_SESSION['email'];
+        if(isset($_SESSION['email'])) echo "Welcome ".$_SESSION['email'];
         ?>
         <!-- Content between header and footer -->
         <div class="musc_anatomy">
