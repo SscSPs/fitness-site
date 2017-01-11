@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+if(isset($_SESSION['authenticated']))
+{
 $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 if ($db->connect_error) {
     die("Connection failed: " . $db ->connect_error);
@@ -26,5 +30,5 @@ if(isset($_POST['submitpart'])){
   echo '<input type="text" name="partName" id="partName" placeholder="Part Name" required/><br>';
   echo '<input type="submit" name="submitpart" value="Add Part" />';
   echo '</form>';
-
+}
 ?>

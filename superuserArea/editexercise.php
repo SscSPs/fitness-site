@@ -1,8 +1,39 @@
 <?php
+session_start();
+
+if(isset($_SESSION['authenticated']))
+{
 $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 if ($db->connect_error) {
     die("Connection failed: " . $db ->connect_error);
 }
+
+//to do the editing part.
+if(isset($_POST['confirmEdit'])){
+  $exerciseName = mysqli_real_escape_string($db, $_POST['exerciseName']);
+  $BodyPart = mysqli_real_escape_string($db, $_POST['BodyPart']);
+  $about = mysqli_real_escape_string($db, $_POST['about']);
+  $videoLink = mysqli_real_escape_string($db, $_POST['videoLink']);
+  $instrument = mysqli_real_escape_string($db, $_POST['instrument']);
+  $more = mysqli_real_escape_string($db, $_POST['more']);
+  $noSpaceBodyPart = preg_replace('/\s+/', '', $BodyPart);
+  $noSpaceExerciseName = preg_replace('/\s+/', '', $exerciseName);
+  $id = mysqli_real_escape_string($db, $noSpaceBodyPart."_".$noSpaceExerciseName);
+
+  $checkExercise = "SELECT * FROM project_exercises_list where id = '$id'";
+  $result2 = $db->query($checkExercise);
+  if ($result2->num_rows == 1) {
+    $bodypartupdate = "UPDATE project_exercises_list set instrument = '$instrument', videoAddress='$videoLink', about='$about', moreinfo = '$more' WHERE id = '$id'";
+    $bodypartresult = $db->query($bodypartupdate);
+    if($bodypartresult === TRUE){
+      echo "Update Successful <br>";
+    }
+    else {
+      echo "some error occured<br>" . $db->error;
+    }
+  }
+}
+
 //fetch list of body parts
 echo "<script>";
 echo "var partsarray = [];";
@@ -11,7 +42,7 @@ echo "</script>";
 $fetchBodyParts = "SELECT id, name, number_of_exercise FROM project_body_parts";
 $result = $db->query($fetchBodyParts);
 if ($result->num_rows > 0) {
-  echo '<form action="addexercise.php" method="post">';
+  echo '<form action="editexercise.php" method="post">';
   echo '<label for="BodyPart" style="width:200px;display: inline-block;">Body Part</label>';
   echo '<select name="BodyPart" id="BodyPart" onchange="bodypartChanged(this)">';
   while($row = $result->fetch_assoc()) {  //bosyy part name.
@@ -100,5 +131,10 @@ if(exerciseName.value == '')
   hidedivision();
 
 </script>";
+}
+
+
+
+
 
 ?>

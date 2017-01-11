@@ -1,6 +1,6 @@
 <?php
-session_start();
 $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+session_start();
 
 if(isset($_SESSION['authenticated']))
 {
@@ -8,7 +8,6 @@ if(isset($_SESSION['authenticated']))
 
   $result = $db->query($nameselectofuser);
   $value = $result->fetch_assoc();
-  echo $result->num_rows;
   $_SESSION['usersname'] = $value["name"];
 
 }
