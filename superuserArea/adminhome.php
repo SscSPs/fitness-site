@@ -5,7 +5,6 @@ session_start();
 if(isset($_SESSION['authenticated']))
 {
   $nameselectofuser = "SELECT name FROM project_admin_details WHERE email = 'sscsps@gmail.com'";
-
   $result = $db->query($nameselectofuser);
   $value = $result->fetch_assoc();
   $_SESSION['usersname'] = $value["name"];

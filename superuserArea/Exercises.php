@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['authenticated']))
 {
   $_SESSION['message'] = "Login First";
-  header("location: ./index.php");
+  header("location: ./");
 }
 else{
 
