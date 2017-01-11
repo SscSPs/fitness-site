@@ -60,7 +60,7 @@ if(isset($_POST['add'])){
       echo "Entry Successful";
     }
     else {
-      echo "some error occured<br>" . $conn->error;
+      echo "some error occured<br>" . $db->error;
     }
   }
   else {
