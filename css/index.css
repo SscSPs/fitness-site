@@ -59,8 +59,23 @@ ul {
     border-width: 1px;
     border-style: solid;
 }
+
 .bigContact li li:hover{
 display: inherit;
 background: #ffffff;
+}
 
+td{
+    padding-bottom: 5px;
+}            
+
+.butt{
+    padding-top: 15px;
+}
+
+.sub_head{
+    font-size: 40px;
+    color: coral;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }

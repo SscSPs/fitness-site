@@ -12,20 +12,42 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="/css/index.css" rel="stylesheet">
         <title>BMI Calculator - Fitness Central</title>
+    
     </head>
 
     <body>
         <header id = 'header3'></header>
 
-        <div class="bmi_calc" style="margin-top: 40px">
-            <h2 style="color: coral;">BMI Calculator</h3>
-            Weight: <input type = "text" style="width: 250px; margin-left: 10px;" id = "weight" placeholder="in kg"><br>
+        <div class="bmi_calc">
+            <center>
+                <table>
+                    <tr>
+                        <td colspan="2" class="sub_head">BMI Calculator<hr></td>
+                    </tr>
+                    <tr>
+                        <td><label for="weight" style="width:200px;display: inline-block;">Weight: </label></td>
+                        <td><input type = "text" style="width: 250px;" id = "weight" placeholder="in kg"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="height" style="width:200px;display: inline-block;">Height:</label></td>
+                        <td><input type = "text" style="width: 100px; margin-right: 44px;" id = "m_height" placeholder="in meters"><input type = "text" style="width: 100px;" id = "cm_height" placeholder="in centimeters"><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p id="result"></p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="butt"><input type="submit" value="Calculate" style="height: 40px; width: 170px;" onclick="bmi_calc()"></td>
+                    </tr>
+                    
+            <!--Weight: <input type = "text" style="width: 250px; margin-left: 10px;" id = "weight" placeholder="in kg"><br>
             <br>
             Height: <input type = "text" style="width: 100px; margin-left: 12px; margin-right: 45px;" id = "m_height" placeholder="in meters"><input type = "text" style="width: 100px;" id = "cm_height" placeholder="in centimeters"><br>
             <br><br>
             <input type="button" value="Calculate" style="height: 40px; width: 100px;" onclick="bmi_calc()"><br>
             <br>
-            <p id="result"></p>
+            -->
+                </table>
+            </center>
         </div> 
            
         

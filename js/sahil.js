@@ -7,7 +7,7 @@ function loadHeader(headerId) {
     text += '<a style="color: white; text-decoration: none;" href="/register.php"><li>Register</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/Login.php"><li>Login</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/BMI.html"><li>BMI Calculator</li></a>';
-    text += '<a style="color: white; text-decoration: none;" href="/BMI.html"><li>Workout Calender</li></a>';
+    text += '<a style="color: white; text-decoration: none;" href="/workout_calendar.php"><li>Workout Calendar</li></a>';
     text += '</ul>';
     document.getElementById(headerId).innerHTML = text;
 }

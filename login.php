@@ -39,20 +39,43 @@
         <header id='header1'></header>
 
         <div>
-            <h1>Login</h1>
-
             <form action="login.php" method="post">
                 <?php
               if(isset($_SESSION))
                   echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
                 ?>
-                    <hr>
+            <center>
+                <table>
+                    <tr>
+                        <td colspan="2" class="sub_head">Login<hr></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" style="width:200px;display: inline-block;">Email address</label></td>
+                        <td><input type="text" name="email" id="email" placeholder="Email" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" style="width:200px;display: inline-block;">Password</label></td>
+                        <td><input type="password" name="password" id="password" placeholder="Password" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="butt"><input type="submit" name="login" value="Login" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p>Not a member? &nbsp;&nbsp;<a href="register.php">Sign Up</a></p></td>
+                    </tr>
+                </table>
+            </center>
+            <!--<h1>Login</h1>
+
+            <form action="login.php" method="post">
+                
+                    
                     <label for="email" style="width:200px;display: inline-block;">Email address</label>
                     <input type="text" name="email" id="email" placeholder="Email" required/><br>
                     <label for="password" style="width:200px;display: inline-block;">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password" required/><br>
                     <input type="submit" name="login" value="Login" />
-                    <p>Not a member? <a href="register.php">Sign Up</a></p>
+                    <p>Not a member? <a href="register.php">Sign Up</a></p>-->
             </form>
         </div>
 
