@@ -5,9 +5,6 @@ if(!isset($_SESSION['authenticated'])){
   header("location: ./");
 }
 
-
-
-
 ?>
 <!DOCTYPE HTML>
 <html>

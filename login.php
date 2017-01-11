@@ -12,11 +12,7 @@
         if(mysqli_num_rows($sql1) == 1 ){
             $_SESSION['message'] = "Login Successful";
             $_SESSION['email'] = $email;
-<<<<<<< HEAD
             header("location: /");
-=======
-            header("location: /index.php");
->>>>>>> origin/master
         }
         else{
             $_SESSION['message'] = "Some error occured. Please check your email and password.";
