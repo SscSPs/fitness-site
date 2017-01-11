@@ -19,7 +19,7 @@ function loadHeaderRegistered(headerId) {
     text += '<a style="color: white; text-decoration: none;" href="/"><li>Home</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/About.php"><li>About</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/Contact.php"><li>Contact Us</li></a>';
-    text += '<a style="color: white; text-decoration: none;" href="#"><li>Logout</li></a>';
+    text += '<a style="color: white; text-decoration: none;" href="/LOGOUT.php"><li>Logout</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/BMI.php"><li>BMI Calculator</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/workout_calendar.php"><li>Workout Calendar</li></a>';
     text += '</ul>';
