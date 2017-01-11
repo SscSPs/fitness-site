@@ -18,15 +18,15 @@
     </head>
 
     <body>
-        <header id = 'header1'></header>
+        <header id = 'header2'></header>
 
             <?php
           if(isset($_SESSION))
               echo "<p style='color:RED;'>" . $_SESSION['message'] . "</p>";
             ?>
-
+            
         <script>
-            loadHeaderRegistered('header1');
+            loadHeaderRegistered('header2');
 
         </script>
     </body>
