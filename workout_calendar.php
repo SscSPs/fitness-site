@@ -1,3 +1,6 @@
+<?php
+         session_start();   
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -16,7 +19,7 @@
     </head>
 
     <body>
-        <header id = 'header3'></header>
+        <header id = 'header1'></header>
 
         <form action="" class="work_calendar">
             <center>
@@ -71,7 +74,13 @@
         
         <script>
             
-            loadHeader('header3');
+            <?php 
+                if(isset($_SESSION['email'])) 
+                {
+                    echo "loadHeaderRegistered('header1');";
+                }
+                else echo "loadHeader('header1');";
+            ?>
 
         </script>
     </body>

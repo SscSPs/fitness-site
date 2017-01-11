@@ -1,3 +1,6 @@
+<?php
+         session_start();   
+?>
 <!DOCTYPE html>
 <html>
 
@@ -78,8 +81,14 @@
         </div>
 
         <script>
-            loadHeader('header1');      
-            
+            <?php 
+                if(isset($_SESSION['email'])) 
+                {
+                    echo "loadHeaderRegistered('header1');";
+                }
+                else echo "loadHeader('header1');";
+            ?>
+     
             function onmouse() {
                 $(function() {
                     $('.map').maphilight();
