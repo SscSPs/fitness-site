@@ -116,7 +116,7 @@
                         <td colspan="2" class="butt"><input type="submit" name="register" value="Register" /></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><p>Already a member? <a href="login.php">Login</a></p></td>
+                        <td colspan="2"><p>Already a member? &nbsp;&nbsp;<a href="login.php">Login</a></p></td>
                     </tr>
                     
                 </table>
