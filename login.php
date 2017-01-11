@@ -12,7 +12,7 @@
         if(mysqli_num_rows($sql1) == 1 ){
             $_SESSION['message'] = "Login Successful";
             $_SESSION['email'] = $email;
-            header("location: /user_access_area/welcomepage.php");
+            header("location: /index.php");
         }
         else{
             $_SESSION['message'] = "Some error occured. Please check your email and password.";
