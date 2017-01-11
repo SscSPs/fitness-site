@@ -13,9 +13,7 @@
         $tempdatetimenow = date("Y_m_d_h_i_s_a");
         $datetimenow = mysqli_real_escape_string($db, $tempdatetimenow);
 
-            echo $password . $password2 . $_POST['gender'];
         if($password == $password2){
-            echo $password . $password2 . $_POST['gender'];
             $password = md5($password);
             $sql1 = $db->query("INSERT INTO Project_Customer_Details VALUE('$datetimenow', '$email', '$name', '$dob', '$gender')");
             $sql2 = $db->query("INSERT INTO Project_Customer_Login VALUE('$datetimenow', '$email', '$password')");
@@ -30,16 +28,16 @@
                 }
                 else{
                     $sql3 = $db->query("DELETE FROM Project_Customer_Details WHERE email = '$email'");
-                    echo "couldn't insert in credentials table";
+                    $_SESSION['message'] = "couldn't insert in credentials table";
                 }
             }
             else{
                 if($sql2){
                     $sql4 = $db->query("DELETE FROM Project_Customer_Login WHERE email = '$email'");
-                    echo "couldn't insert in details table;";
+                    $_SESSION['message'] = "couldn't insert in details table;";
                 }
                 else{
-                    echo "couldn't insert in any table";
+                    $_SESSION['message'] = "couldn't insert in any table";
                 }
             }
 
