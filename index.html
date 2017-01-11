@@ -11,6 +11,8 @@
         <script src="/js/sahil.js"></script>
 
         <script type="text/javascript">
+            var s = 20;
+            
             $(function() {
                 $('.map').maphilight();
             });
@@ -76,7 +78,7 @@
         </div>
 
         <script>
-            loadHeader('header1');          
+            loadHeader('header1');      
             
             function onmouse() {
                 $(function() {
@@ -85,7 +87,7 @@
                 document.getElementById("info_head").innerHTML = "";
                 document.getElementById("info").innerHTML = "";
                 document.getElementById("butt_container").innerHTML = '';
-                butt_rot();
+                butt_rot(s);
             }
 
         </script>
