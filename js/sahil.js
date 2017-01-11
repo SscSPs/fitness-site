@@ -12,7 +12,7 @@ function loadHeader(headerId) {
     document.getElementById(headerId).innerHTML = text;
 }
 
-function loadHeaderRegistered(headerId) {
+function loadHeaderRegistered(headerId,user_name) {
     var text='';
     text = '<h1><a style="color: white; text-decoration: none;" href="/">Fitness Central</a></h1>';
     text += '<ul >';

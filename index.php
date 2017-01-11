@@ -1,5 +1,10 @@
 <?php
-         session_start();   
+        session_start();
+        $_SESSION['message'] = '';
+        $user = $_SESSION['email'];
+        $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+
+        $sql1 = $db->query("SELECT name FROM Project_Customer_details WHERE email = '$user'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +65,9 @@
 
         </map>
 
-
+        <?php
+        echo "Welcome ".$_SESSION['email'];
+        ?>
         <!-- Content between header and footer -->
         <div class="musc_anatomy">
             <center>
