@@ -22,7 +22,7 @@ else{
 
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="/css/index.css" rel="stylesheet">
-        <title>Registered User - Fitness Central</title>
+        <title>Admin - Exercises - Fitness Central</title>
     </head>
 
     <body>

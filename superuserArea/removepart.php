@@ -45,6 +45,9 @@ if(isset($_SESSION['authenticated']))
   if(isset($_POST['submitremovepart'])){
     $id = mysqli_real_escape_string($db, $_POST['BodyPart']);
     $partName = '';
+
+    $fetchBodyParts = "SELECT id, name, number_of_exercise FROM project_body_parts";
+    $result = $db->query($fetchBodyParts);
     while($row = $result->fetch_assoc()){
       if($id == $row["id"])
       {
@@ -59,7 +62,7 @@ if(isset($_SESSION['authenticated']))
     if($resultforParts){
       if($resultforExercises){
         if($partName==''){
-          echo "Deleted the part $id from the parts table.";
+          echo "Deleted the part $partName from the parts table.";
         }
         else{
           echo "$partName deleted from parts table and all exercises related to it are also deleted.";
