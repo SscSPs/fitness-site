@@ -67,13 +67,63 @@
         <p id='a'></p>
 
         <div>
-            <h1>Registration</h1>
-
             <form action="register.php" method="post">
                 <?php
               if(isset($_SESSION))
                   echo "<p style='color:RED;'>" . $_SESSION['message'] . "</p>";
                 ?>
+                
+                <center>
+            
+                <table>
+                    <tr>
+                        <td colspan="2" class="sub_head">Registration<hr></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" style="width:200px;display: inline-block;">Email address</label></td>
+                        <td><input type="text" name="email" id="email" placeholder="Email" required/><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name" style="width:200px;display: inline-block;">Your Name</label></td>
+                        <td><input type="text" name="name" id="name" placeholder="Name" required/><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" style="width:200px;display: inline-block;">Password</label></td>
+                        <td><input type="password" name="password" id="password" placeholder="Password" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password2" style="width:200px;display: inline-block;">Confirm Password</label></td>
+                        <td><input type="password" name="password2" id="password2" placeholder="Confirm Password" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob" style="width:200px;display: inline-block;">Date of Birth</label></td>
+                        <td><input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY" required/><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                              <label for="gender" style="display: inline-block;">Gender</label>
+                        </td>
+                        <td>
+                              <input type="radio" name="gender" value="Male"/>Male
+                              <input type="radio" name="gender" value="Female">Female
+                              <input type="radio" name="gender" value="Other">Other
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p>By clicking Register, you agree on our <a href="/tac.html">terms and condition</a>.</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="butt"><input type="submit" name="register" value="Register" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p>Already a member? <a href="login.php">Login</a></p></td>
+                    </tr>
+                    
+                </table>
+                
+            </center>
+                
+                <!--
                     <hr>
                     <label for="email" style="width:200px;display: inline-block;">Email address</label>
                     <input type="text" name="email" id="email" placeholder="Email" required/><br>
@@ -94,6 +144,7 @@
                     <p>By clicking Register, you agree on our <a href="/tac.html">terms and condition</a>.</p>
                     <input type="submit" name="register" value="Register" />
                     <p>Already a member? <a href="login.php">Login</a></p>
+-->
             </form>
         </div>
 
