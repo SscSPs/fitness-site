@@ -29,7 +29,8 @@ function butt_rot(id) {         //id is used to identify the navigation page
 function getInfo(elem,t) {  //t is the identifier
     document.getElementById("info_head").innerHTML = "The " + elem.id;
     changeInnerhtmlFromXML(elem, "info", t);
-    document.getElementById("butt_container").innerHTML = "<a href='/exercise/" + elem.id + ".php' style='color: #ffffff; text-decoration: none;'><p id='butt'>See Exercises</p></a>";
+    if(t === 10) document.getElementById("butt_container").innerHTML = "<a href='../exercise/" + elem.id + ".php' style='color: #ffffff; text-decoration: none;'><p id='butt'>See Exercises</p></a>";
+    else document.getElementById("butt_container").innerHTML = "<a href='/exercise/" + elem.id + ".php' style='color: #ffffff; text-decoration: none;'><p id='butt'>See Exercises</p></a>";
 }
 
 
