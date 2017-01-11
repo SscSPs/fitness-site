@@ -7,6 +7,7 @@ function loadHeader(headerId) {
     text += '<a style="color: white; text-decoration: none;" href="/register.php"><li>Register</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/Login.php"><li>Login</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/BMI.html"><li>BMI Calculator</li></a>';
+    text += '<a style="color: white; text-decoration: none;" href="/BMI.html"><li>Workout Calender</li></a>';
     text += '</ul>';
     document.getElementById(headerId).innerHTML = text;
 }
@@ -18,7 +19,6 @@ function loadHeaderRegistered(headerId) {
     text += '<a style="color: white; text-decoration: none;" href="/"><li>Home</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/About.html"><li>About</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/Contact.html"><li>Contact Us</li></a>';
-    text += '<a style="color: white; text-decoration: none;" href="/register.php"><li>Register</li></a>';
     text += '<a style="color: white; text-decoration: none;" ><li>Logout</li></a>';
     text += '<a style="color: white; text-decoration: none;" href="/BMI.html"><li>BMI Calculator</li></a>';
     text += '</ul>';
