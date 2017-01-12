@@ -11,6 +11,7 @@ if(isset($_SESSION['authenticated']))
 
 }
 else{
+  $_SESSION['message'] = 'Login first';
   header("Location: ./");
 }
 

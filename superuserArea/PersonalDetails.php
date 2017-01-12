@@ -32,7 +32,7 @@ if(!isset($_SESSION['authenticated'])){
         </ul>
       </div>
       <div>
-        <iframe id = "frame" ></iframe>
+        <iframe id = "frame" style='width:500px;height:200px' ></iframe>
       </div>
 
 

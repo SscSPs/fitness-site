@@ -1,86 +1,68 @@
 <?php
-    session_start();
-    $_SESSION['message'] = '';
-    $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+      session_start();
+ if(isset($_SESSION['authenticated'])){
+   $_SESSION['message']="You are already logged in, logout to exit.";
+  header("Location: ./adminhome.php");
+}
 
-    if(isset($_POST['login'])){
-        $email = mysqli_real_escape_string($db, $_POST['email']);
-        $password = mysqli_real_escape_string($db, $_POST['password']);
+      if(isset($_POST['login'])){
+          $email = mysqli_real_escape_string($db, $_POST['email']);
+          $password = mysqli_real_escape_string($db, $_POST['password']);
 
-        $password = md5($password);
-        $sql1 = $db->query("SELECT * FROM Project_Customer_Login WHERE email = '$email' AND passhash = '$password'");
-        if(mysqli_num_rows($sql1) == 1 ){
-            $_SESSION['message'] = "Login Successful";
-            $_SESSION['email'] = $email;
-            header("location: /index.php");
-        }
-        else{
-            $_SESSION['message'] = "Some error occured. Please check your email and password.";
-        }
-    }
-?>
+          $password = md5($password);
+         $sql1 = $db->query("SELECT * FROM Project_Admin_Login WHERE email = '$email' AND passhash = '$password'");
+         if($sql1->num_rows > 0 ){
+             $_SESSION['message'] = "Login Successful";
+              $_SESSION['email'] = $email;
+             $_SESSION['authenticated'] = 1;
+             header("Location: ./adminhome.php");
+             echo $email;
+          }
+          else{
+              $_SESSION['message'] = "Some error occured. Please check your email and password.";
+          }
+      }
+  ?>
 
-<!DOCTYPE html>
-<html>
-    <meta charset="utf-8">
+ <!DOCTYPE HTML>
+  <html>
+      <meta charset="utf-8">
 
     <head>
         <script type="text/javascript" src="/js/index.js"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-        <script src="/js/jquery.maphilight.min.js"></script>
-        <script src="/js/sahil.js"></script>
+          <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+          <script src="/js/jquery.maphilight.min.js"></script>
+          <script src="/js/sahil.js"></script>
+          <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+          <link href="/css/index.css" rel="stylesheet">
+         <title>Admin Access Panel - Fitness Central</title>
+ </head>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="/css/index.css" rel="stylesheet">
-        <title>Login - Fitness Central</title>
-    </head>
+      <body>
+          <header id='header1'></header>
 
-    <body>
-        <header id='header1'></header>
+          <div>
+            <h1>Welcome Admin, Please Login</h1>
+            <form action="./" method="post">
+                  <?php
+               if(isset($_SESSION['message']))
+                    echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
+                  ?>
+                     <hr>
 
-        <div>
-            <form action="login.php" method="post">
-                <?php
-              if(isset($_SESSION))
-                  echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
-                ?>
-            <center>
-                <table>
-                    <tr>
-                        <td colspan="2" class="sub_head">Login<hr></td>
-                    </tr>
-                    <tr>
-                        <td><label for="email" style="width:200px;display: inline-block;">Email address</label></td>
-                        <td><input type="text" name="email" id="email" placeholder="Email" required/></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password" style="width:200px;display: inline-block;">Password</label></td>
-                        <td><input type="password" name="password" id="password" placeholder="Password" required/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="butt"><input type="submit" name="login" value="Login" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><p>Not a member? &nbsp;&nbsp;<a href="register.php">Sign Up</a></p></td>
-                    </tr>
-                </table>
-            </center>
-            <!--<h1>Login</h1>
-            <form action="login.php" method="post">
-
-
-                    <label for="email" style="width:200px;display: inline-block;">Email address</label>
-                    <input type="text" name="email" id="email" placeholder="Email" required/><br>
-                    <label for="password" style="width:200px;display: inline-block;">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" required/><br>
-                    <input type="submit" name="login" value="Login" />
-                    <p>Not a member? <a href="register.php">Sign Up</a></p>-->
-            </form>
-        </div>
-
-        <script>
-            loadHeader("header1");
-        </script>
-    </body>
+                      <label for="email" style="width:200px;display: inline-block;">Email address</label>
+                      <input type="text" name="email" id="email" placeholder="Email" required/><br>
+                      <label for="password" style="width:200px;display: inline-block;">Password</label>
+                      <input type="password" name="password" id="password" placeholder="Password" required/><br>
+                      <input type="submit" name="login" value="Login" />
+                     <p>Forgot password? Contact someone with authority.</p>
+                     <p>Do not have an account? Then what are you doing here?</p>
+              </form>
+          </div>
+          <script>
+             loadHeaderAdmin("header1");
+          </script>
+      </body>
 
 </html>

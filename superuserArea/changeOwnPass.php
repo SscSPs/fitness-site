@@ -16,7 +16,7 @@ echo '<label for="newPass1" style="width:200px;display: inline-block;">New Passw
 echo '<input type="text" name="newPass1" id="newPass1" placeholder="New Password" required/><br>';
 echo '<label for="newPass2" style="width:200px;display: inline-block;">Confirm New Password.</label>';
 echo '<input type="text" name="newPass2" id="newPass2" placeholder="Confirm New Password" required/><br>';
-echo '<input type="submit" name="changeSelf" value="Add Exercise" />';
+echo '<input type="submit" name="changeSelf" value="Change Password" />';
 echo '</form>';
 
 if(isset($_POST['changeSelf'])){
