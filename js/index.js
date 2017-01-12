@@ -11,7 +11,6 @@ function butt_rot() {         //id is used to identify the navigation page
     }
 
     if (x === 1) {
-        document.getElementById("image").innerHTML = "<img src = 'images/muscle_front_final.png' usemap='#front' class='map'>";           
         x = 0;
         return;
     }
