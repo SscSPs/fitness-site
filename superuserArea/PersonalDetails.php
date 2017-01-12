@@ -41,13 +41,13 @@ if(!isset($_SESSION['authenticated'])){
             function visitlink(a) {
               switch (a.innerHTML) {
                 case "Change own password.":
-                  form1.src = "changeOwnPass.php";
+                  frame.src = "changeOwnPass.php";
                   break;
                 case "Edit your details":
-                  form1.src = "editDetails.php";
+                  frame.src = "editDetails.php";
                   break;
                 case "View your details":
-                  form1.src = "viewDetails.php";
+                  frame.src = "viewDetails.php";
                   break;
                 default:
                   console.log("what are you doing!? click on the list");
