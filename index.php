@@ -69,7 +69,7 @@
         </map>
 
         <?php
-        if(isset($_SESSION['email'])) echo "Welcome ".$_SESSION['email'];
+        if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['email'];
         ?>
         <!-- Content between header and footer -->
         <div class="musc_anatomy">

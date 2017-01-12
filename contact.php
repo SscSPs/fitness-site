@@ -25,6 +25,10 @@
         <header id='header1'>
         </header>
         
+        <?php
+        if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['email'];
+        ?>
+        
         <center>
             <table>
                 <tr><td class="sub_head"  style="width: 350px; text-align: center;">Contact Us!<hr></td></tr>

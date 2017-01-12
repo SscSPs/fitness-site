@@ -20,6 +20,10 @@
     <body>
         <header id = 'header1'></header>
 
+        <?php
+        if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['email'];
+        ?>
+        
         <div class="bmi_calc">
             <center>
                 <table>
