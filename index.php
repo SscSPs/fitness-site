@@ -22,7 +22,6 @@
         <script src="/js/sahil.js"></script>
 
         <script type="text/javascript">
-            var s = 20;
 
             $(function() {
                 $('.map').maphilight();
@@ -106,7 +105,7 @@
                 document.getElementById("info_head").innerHTML = "";
                 document.getElementById("info").innerHTML = "";
                 document.getElementById("butt_container").innerHTML = '';
-                butt_rot(s);
+                butt_rot();
             }
 
         </script>
