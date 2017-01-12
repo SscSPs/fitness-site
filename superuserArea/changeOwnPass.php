@@ -11,11 +11,11 @@ if ($db->connect_error) {
 
 echo '<form action="changeOwnPass.php" method="post">';
 echo '<label for="oldPass" style="width:200px;display: inline-block;">Current Password</label>';
-echo '<input type="text" name="oldPass" id="oldPass" placeholder="Current Password" required/><br>';
+echo '<input type="password" name="oldPass" id="oldPass" placeholder="Current Password" required/><br>';
 echo '<label for="newPass1" style="width:200px;display: inline-block;">New Password</label>';
-echo '<input type="text" name="newPass1" id="newPass1" placeholder="New Password" required/><br>';
+echo '<input type="password" name="newPass1" id="newPass1" placeholder="New Password" required/><br>';
 echo '<label for="newPass2" style="width:200px;display: inline-block;">Confirm New Password.</label>';
-echo '<input type="text" name="newPass2" id="newPass2" placeholder="Confirm New Password" required/><br>';
+echo '<input type="password" name="newPass2" id="newPass2" placeholder="Confirm New Password" required/><br>';
 echo '<input type="submit" name="changeSelf" value="Change Password" />';
 echo '</form>';
 
@@ -36,11 +36,11 @@ if(isset($_POST['changeSelf'])){
       else echo "some error occured on updating password, the old one is not changed.";
     }
     else{
-      echo "Password is wrong. Try again";
+      echo "Current password is wrong. Try again";
     }
   }
   else{
-    echo "Passwords do not match. Fix that.";
+    echo "New passwords do not match. Fix that.";
   }
 }
 

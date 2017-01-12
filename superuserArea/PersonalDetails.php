@@ -23,7 +23,7 @@ if(!isset($_SESSION['authenticated'])){
 
     <body>
       <header id='header1'></header>
-      <div><h2>Change stuff</h2>
+      <div><h2>Personal Details</h2>
         <ul style="background: rgba(0,0,0,0);font-size: auto;padding:auto;text-aligh:auto;display:auto;" >
             <li onClick="visitlink(this);">Change own password.</li>
             <li onClick="visitlink(this);">Edit your details</li>

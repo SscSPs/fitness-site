@@ -48,6 +48,7 @@
                   <?php
                if(isset($_SESSION['message']))
                     echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
+                    $_SESSION['message'] = '';
                   ?>
                      <hr>
 

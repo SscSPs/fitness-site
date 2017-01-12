@@ -5,20 +5,20 @@ var x = 0;
 function butt_rot() {         //id is used to identify the navigation page
     //=== is used to check if they are exactly the same, i.e. same data type, and value. == will work, but === is in better
     if (x === 0) {
-        document.getElementById("image").innerHTML = "<img src = 'images/muscle_back_final.png' usemap='#back' class='map'>";       
+        document.getElementById("image").innerHTML = "<img src = 'images/muscle_back_final.png' usemap='#back' class='map'>";
         x = 1;
         return;
     }
 
     if (x === 1) {
-        document.getElementById("image").innerHTML = "<img src = 'images/muscle_front_final.png' usemap='#front' class='map'>";           
+        document.getElementById("image").innerHTML = "<img src = 'images/muscle_front_final.png' usemap='#front' class='map'>";
         x = 0;
         return;
     }
 }
 
 //to display core details on click of the core
-function getInfo(elem) {  
+function getInfo(elem) {
     document.getElementById("info_head").innerHTML = "The " + elem.id;
     changeInnerhtmlFromXML(elem, "info");
     document.getElementById("butt_container").innerHTML = "<a href='/exercise/" + elem.id + ".php' style='color: #ffffff; text-decoration: none;'><p id='butt'>See Exercises</p></a>";
@@ -27,16 +27,14 @@ function getInfo(elem) {
 
 function changeInnerhtmlFromXML(a, elementToChange) {
     var txt = '';
-    var request = new XMLHttpRequest();    
+    var request = new XMLHttpRequest();
     request.open("GET", "xml/aboutBodyParts.xml", false);
     request.send();
     var xml = request.responseXML;
     var i;
     var x = xml.documentElement.childNodes;
     for (i = 1; i < x.length; i += 2)
-        if (x[i].nodeName === a.id)
-            txt = x[i].textContent + "<br>";
-    document.getElementById(elementToChange).innerHTML = txt;
+        if(x[i].nodeName === a.id)
+        txt = x[i].textContent + "<br>";
+      document.getElementById(elementToChange).innerHTML = txt;
 }
-
-
