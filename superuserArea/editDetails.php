@@ -8,7 +8,7 @@ $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 if ($db->connect_error) {
     die("Connection failed: " . $db ->connect_error);
 }
-
+/*
 echo '<form action="changeOwnPass.php" method="post">';
 echo '<label for="oldPass" style="width:200px;display: inline-block;">Current Password</label>';
 echo '<input type="text" name="oldPass" id="oldPass" placeholder="Current Password" required/><br>';
@@ -44,6 +44,6 @@ if(isset($_POST['changeSelf'])){
   }
 }
 
-
+*/
 
  ?>
