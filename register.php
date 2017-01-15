@@ -16,15 +16,15 @@
         if($password == $password2){
             $password = md5($password);
             $sql1 = $db->query("INSERT INTO Project_Customer_Details VALUE('$datetimenow', '$email', '$name', '$dob', '$gender')");
-            $sql2 = $db->query("INSERT INTO Project_Customer_Login VALUE('$datetimenow', '$email', '$password')");
+            $sql2 = $db->query("INSERT INTO Project_Customer_Login VALUE('$datetimenow', '$email', '$password', 0)");
 
             if($sql1)
             {
                 if($sql2){
-                    $_SESSION['message'] = "you are registered, please login.";
+                    $_SESSION['message'] = "You are registered, please login.";
                     $_SESSION['user'] = $name;
                     $_SESSION['email'] = $email;
-                    header("location: login.php");
+                    header("location: emailVerification.php");
                 }
                 else{
                     $sql3 = $db->query("DELETE FROM Project_Customer_Details WHERE email = '$email'");
@@ -72,9 +72,9 @@
               if(isset($_SESSION))
                   echo "<p style='color:RED;'>" . $_SESSION['message'] . "</p>";
                 ?>
-                
+
                 <center>
-            
+
                 <table>
                     <tr>
                         <td colspan="2" class="sub_head">Registration<hr></td>
@@ -118,11 +118,11 @@
                     <tr>
                         <td colspan="2"><p>Already a member? &nbsp;&nbsp;<a href="login.php">Login</a></p></td>
                     </tr>
-                    
+
                 </table>
-                
+
             </center>
-                
+
                 <!--
                     <hr>
                     <label for="email" style="width:200px;display: inline-block;">Email address</label>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION['message'] = '';
+    //$_SESSION['message'] = '';  //I done think we nees this...
     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 
     if(isset($_POST['login'])){
@@ -8,14 +8,22 @@
         $password = mysqli_real_escape_string($db, $_POST['password']);
 
         $password = md5($password);
-        $sql1 = $db->query("SELECT * FROM Project_Customer_Login WHERE email = '$email' AND passhash = '$password'");
+        $sql1 = $db->query("SELECT * FROM Project_Customer_Login WHERE email = '$email' AND passhash = '$password' limit 1");
         if(mysqli_num_rows($sql1) == 1 ){
-            $_SESSION['message'] = "Login Successful";
-            $_SESSION['email'] = $email;
-            header("location: /");
+          while($row = $sql1->fetch_assoc()){
+            if($row['verified'] == 1){
+              $_SESSION['message'] = "Login Successful";
+              $_SESSION['email'] = $email;
+              header("location: /");
+            }
+            else{
+              $_SESSION['email'] = $email;
+              header("location: /verifyfirst.php");
+            }
+          }
         }
         else{
-            $_SESSION['message'] = "Some error occured. Please check your email and password.";
+          $_SESSION['message'] = "Some error occured. Please check your email and password.";
         }
     }
 ?>
@@ -41,7 +49,7 @@
         <div>
             <form action="login.php" method="post">
                 <?php
-              if(isset($_SESSION))
+              if(isset($_SESSION['message']))
                   echo "<p style='color:#666666;'>" . $_SESSION['message'] . "</p>";
                 ?>
             <center>
