@@ -52,15 +52,15 @@
                     </tr>
                     <tr>
                         <td><label for="email" style="width:200px;display: inline-block;">Email address</label></td>
-                        <td><input type="text" name="email" id="email" placeholder="Email" <?php if(isset($_SESSION['email'])) echo "value=$user" ?> required/><br></td>
+                        <td><input type="text" name="email" id="email" placeholder="Email" <?php if(isset($_SESSION['email'])) echo "value=$user readonly" ?> required/><br></td>
                     </tr>
                     <tr>
                         <td><label for="name" style="width:200px;display: inline-block;">Your Name</label></td>
-                        <td><input type="text" name="name" id="name" placeholder="Name" <?php if(isset($_SESSION['email'])) echo "value=$user_name" ?> required/><br></td>
+                        <td><input type="text" name="name" id="name" placeholder="Name" <?php if(isset($_SESSION['email'])) echo "value=$user_name readonly" ?> required/><br></td>
                     </tr>
                     <tr>
                         <td><label for="dob" style="width:200px;display: inline-block;">Date of Birth</label></td>
-                        <td><input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY" <?php if(isset($_SESSION['email'])) echo "value=$user_dob" ?> required/><br></td>
+                        <td><input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY" <?php if(isset($_SESSION['email'])) echo "value=$user_dob readonly" ?> required/><br></td>
                     </tr>
                     <tr>
                         <td><label for="bmi" style="width:200px;display: inline-block;">Motive</label></td>
