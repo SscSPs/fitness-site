@@ -26,7 +26,7 @@
         </header>
         
         <?php
-        if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['email'];
+            if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['message'];
         ?>
         
         <center>

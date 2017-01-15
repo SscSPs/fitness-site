@@ -24,6 +24,11 @@
             Will be loaded by JS-->
         <header id='header1'>
         </header>
+        
+        <?php
+            if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['message'];
+        ?>
+        
         <H1>Hey there!</H1>
         <h2>About us</h2>
         <div>
