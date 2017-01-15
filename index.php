@@ -6,7 +6,14 @@
             $user = $_SESSION['email'];
             $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 
-            $sql1 = $db->query("SELECT name FROM Project_Customer_details WHERE email = '$user'");
+            $result = $db->query("SELECT * FROM Project_Customer_details WHERE email = '$user'");
+            
+            if($result->num_rows > 0)
+            {
+                while($row = $result->fetch_assoc()){
+                    $_SESSION['message'] = $row["name"];
+                }
+            }
         }
 ?>
 <!DOCTYPE html>
@@ -68,7 +75,7 @@
         </map>
 
         <?php
-        if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['email'];
+            if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['message'];
         ?>
         <!-- Content between header and footer -->
         <div class="musc_anatomy">
