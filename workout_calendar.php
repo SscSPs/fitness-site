@@ -1,5 +1,23 @@
 <?php
-         session_start();   
+    session_start();   
+    if(isset($_SESSION['email']))
+        {
+            $_SESSION['message'] = '';
+            $user = $_SESSION['email'];
+            $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+
+            $result = $db->query("SELECT * FROM Project_Customer_details WHERE email = '$user'");
+            
+            if($result->num_rows > 0)
+            {
+                while($row = $result->fetch_assoc()){
+                    $_SESSION['message'] = $row["name"];
+                    $user_name = $row["name"];
+                    $user_dob = $row["dob"];
+                    $user_gender = $row["gender"];    
+                }
+            }
+        }
 ?>
 <!DOCTYPE HTML>
 
@@ -34,15 +52,15 @@
                     </tr>
                     <tr>
                         <td><label for="email" style="width:200px;display: inline-block;">Email address</label></td>
-                        <td><input type="text" name="email" id="email" placeholder="Email" required/><br></td>
+                        <td><input type="text" name="email" id="email" placeholder="Email" <?php if(isset($_SESSION['email'])) echo "value=$user" ?> required/><br></td>
                     </tr>
                     <tr>
                         <td><label for="name" style="width:200px;display: inline-block;">Your Name</label></td>
-                        <td><input type="text" name="name" id="name" placeholder="Name" required/><br></td>
+                        <td><input type="text" name="name" id="name" placeholder="Name" <?php if(isset($_SESSION['email'])) echo "value=$user_name" ?> required/><br></td>
                     </tr>
                     <tr>
                         <td><label for="dob" style="width:200px;display: inline-block;">Date of Birth</label></td>
-                        <td><input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY" required/><br></td>
+                        <td><input type="date" name="dob" id="dob" placeholder="DD/MM/YYYY" <?php if(isset($_SESSION['email'])) echo "value=$user_dob" ?> required/><br></td>
                     </tr>
                     <tr>
                         <td><label for="bmi" style="width:200px;display: inline-block;">Motive</label></td>
@@ -60,9 +78,9 @@
                               <label for="gender" style="display: inline-block;">Gender</label>
                         </td>
                         <td>
-                              <input type="radio" name="gender" value="Male"/>Male
-                              <input type="radio" name="gender" value="Female">Female
-                              <input type="radio" name="gender" value="Other">Other
+                              <input type="radio" name="gender" value="Male" <?php if(isset($_SESSION['email'])) if($user_gender == "Male") echo "checked='checked'" ?> />Male
+                              <input type="radio" name="gender" value="Female" <?php if(isset($_SESSION['email'])) if($user_gender == "Female") echo "checked='checked'" ?> />Female
+                              <input type="radio" name="gender" value="Other" <?php if(isset($_SESSION['email'])) if($user_gender == "Other") echo "checked='checked'" ?> />Other
                         </td>
                     </tr>
                     <tr>
