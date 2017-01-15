@@ -5,7 +5,16 @@ if ($db->connect_error) {
 	die("Connection failed: " . $db->connect_error);
 }
 
-$str = file_get_contents('/json/exercises.json', FILE_USE_INCLUDE_PATH); //change this path to json file with data.
+parse_str($_SERVER['QUERY_STRING']);
+//can receive $filePath as query.
+
+if(isset($filePath)){
+  $str = file_get_contents($filePath, FILE_USE_INCLUDE_PATH); //taken from query this path to json file with data.
+}
+else{
+  $str = file_get_contents('/json/exercises.json', FILE_USE_INCLUDE_PATH); //default path to json file with data.
+}
+
 $partInserted = 0;
 $partInsertFail = 0;
 $partUpdated = 0;
@@ -43,10 +52,12 @@ for ($i = 0; $i < count($json['part']); $i++) {
 }
 
 echo "<h2>Finshed executing</h2>";
+//parts info
 echo "Part Inserted: $partInserted<br />";
 echo "Part Insert Failed: $partInsertFail<br />";
 echo "Parts Updated: $partUpdated<br />";
 echo "Part Update Failed: $partUpdateFail<br /><br />";
+//exercise info
 echo "Exercise Inserted: $exerciseInserted<br />";
 echo "Exercise Insert Failed: $exerciseInsertFail<br />";
 echo "Exercise Updated: $exerciseUpdated<br />";
