@@ -3,6 +3,7 @@ $db = mysqli_connect("localhost", "root", "", "Project_fitness");
 
 parse_str($_SERVER['QUERY_STRING']);
 // we have email and id from query string;
+if(isset($email)){
 $md5email = md5($email);
 $sql1 = $db->query("SELECT name FROM Project_Customer_Details WHERE email = '$email' limit 1");
 if(mysqli_num_rows($sql1) == 1 ){
@@ -19,6 +20,12 @@ if($id == $md5email.$md5name){
   $verified = true;
   $verifyemail = "UPDATE Project_Customer_Login set verified = 1 WHERE email = '$email'";
   $sql2 = $db->query($verifyemail);
+}
+else{
+  session_unset();
+  session_destroy();
+  header("location: /");
+}
 }
 else{
   session_unset();
