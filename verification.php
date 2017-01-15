@@ -8,13 +8,11 @@ $md5email = md5($email);
 $sql1 = $db->query("SELECT name FROM Project_Customer_Details WHERE email = '$email' limit 1");
 if(mysqli_num_rows($sql1) == 1 ){
   while($row = $sql1->fetch_assoc()){
-    echo $row['name'];
     $name = $row['name'];
   }
 }
 $md5name = md5($name);
-echo $md5email.$md5name;
-  $sql2;
+$sql2;
 if($id == $md5email.$md5name){
   //verified
   $verified = true;
