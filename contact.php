@@ -1,5 +1,6 @@
 <?php
-         session_start();   
+  session_start();
+  require 'commonFiles/getConnection.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,15 +21,15 @@
     </head>
 
     <body>
-        <!-- header area with navigation bar and the background image and name of the website 
+        <!-- header area with navigation bar and the background image and name of the website
             Will be loaded by JS-->
         <header id='header1'>
         </header>
-        
+
         <?php
             if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['message'];
         ?>
-        
+
         <center>
             <table>
                 <tr><td class="sub_head"  style="width: 350px; text-align: center;">Contact Us!<hr></td></tr>
@@ -47,9 +48,9 @@
             </left>
         </div>
         <script>
-            
-            <?php 
-                if(isset($_SESSION['email'])) 
+
+            <?php
+                if(isset($_SESSION['email']))
                 {
                     echo "loadHeaderRegistered('header1');";
                 }

@@ -1,5 +1,6 @@
 <?php
-$db = mysqli_connect("localhost", "root", "", "Project_fitness");
+
+require 'commonFiles/getConnection.php';
 
 parse_str($_SERVER['QUERY_STRING']);
 // we have email and id from query string;

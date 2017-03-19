@@ -1,6 +1,6 @@
 <?php
 
-    $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+    require 'commonFiles/getConnection.php';
 
     if(isset($_POST['register'])){
         session_start();

@@ -1,23 +1,24 @@
 <?php
-    session_start();   
+    session_start();
     if(isset($_SESSION['email']))
         {
             $_SESSION['message'] = '';
             $user = $_SESSION['email'];
-            $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+
+            require 'commonFiles/getConnection.php';
 
             $result = $db->query("SELECT * FROM Project_Customer_details WHERE email = '$user'");
-            
+
             if($result->num_rows > 0)
             {
                 while($row = $result->fetch_assoc()){
                     $name = $row["name"];
                     $user_name = $row["name"];
                     $user_dob = $row["dob"];
-                    $user_gender = $row["gender"];    
+                    $user_gender = $row["gender"];
                 }
                 $age = date("Y") - substr($user_dob,0,4);
-                 
+
                 if(isset($_POST['cal_butt']))
                 {
                     $_SESSION['message'] = "<center>
@@ -29,7 +30,7 @@
                             <td>Week 4</td>
                             <td>Week 5</td>
                         </tr>";
-                    
+
                     if($_POST['motive'] == "health")
                     {
                         $_SESSION['message'] .= "<tr>
@@ -43,7 +44,7 @@
                             5kg dumb-bell curls(10 reps)<br>
                             15 seconds plank<br>
                             </td>
-                            
+
                             <td>
                             <b>Full Body Workout</b><br>
                             Workout 5 days a week, rest 2 days<br>
@@ -54,7 +55,7 @@
                             5kg dumb-bell curls(20 reps)<br>
                             30 seconds plank<br>
                             </td>
-                            
+
                             <td>
                             <b>Muscle Specific Workout</b><br>
                             Workout 5 days a week, rest 2 days<br>
@@ -100,7 +101,7 @@
                             7.5kg 1 arm dumb-bell row(10 reps)<br>
                             5kg Seated Row(10 reps)<br>
                             </td>
-                            
+
                             <td><b>Muscle Specific Workout</b><br>
                             Workout 5 days a week, rest 2 days<br>
                             <br>
@@ -144,7 +145,7 @@
                             10kg Reverse Lat Pull Down(20 reps)<br>
                             7.5kg 1 arm dumb-bell row(15 reps)<br>
                             5kg Seated Row(15 reps)<br></td>
-                            
+
                             <td>Muscle Specific Workout</b><br>
                             Workout 5 days a week, rest 2 days<br>
                             <br>
@@ -188,10 +189,10 @@
                             15kg Reverse Lat Pull Down(15 reps)<br>
                             10kg 1 arm dumb-bell row(10 reps)<br>
                             10kg Seated Row(10 reps)</td>
-                        </tr>    
+                        </tr>
                     </table>
                     </center>";
-                        
+
                     header('location: calendar_table.php');
                     }
                 }
@@ -212,19 +213,19 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="/css/index.css" rel="stylesheet">
         <title>Workout Calendar - Fitness Central</title>
-        
+
     </head>
 
     <body>
         <header id = 'header1'></header>
-        
+
         <?php
             if(isset($_SESSION['email'])) echo "Logged in as: ".$name;
         ?>
 
         <form method="post" action="workout_calendar.php" class="work_calendar">
             <center>
-            
+
                 <table>
                     <tr>
                         <td colspan="2" class="sub_head">Workout Calendar<hr></td>
@@ -265,18 +266,18 @@
                     <tr>
                         <td colspan="2" class="butt"><input type="submit" name="cal_butt" value="Get Started ->" style="height: 40px; width: 170px;"/></td>
                     </tr>
-                    
+
                 </table>
-                
+
             </center>
-        
+
         </form>
-           
-        
+
+
         <script>
-            
-            <?php 
-                if(isset($_SESSION['email'])) 
+
+            <?php
+                if(isset($_SESSION['email']))
                 {
                     echo "loadHeaderRegistered('header1');";
                 }

@@ -4,10 +4,9 @@
         {
             $_SESSION['message'] = '';
             $user = $_SESSION['email'];
-            $db = mysqli_connect("localhost", "root", "", "Project_fitness");
-
+            require 'commonFiles/getConnection.php';
             $result = $db->query("SELECT * FROM Project_Customer_details WHERE email = '$user'");
-            
+
             if($result->num_rows > 0)
             {
                 while($row = $result->fetch_assoc()){

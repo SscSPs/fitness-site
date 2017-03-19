@@ -1,8 +1,8 @@
 <?php
     session_start();
     //$_SESSION['message'] = '';  //I done think we nees this...
-    $db = mysqli_connect("localhost", "root", "", "Project_fitness");
-
+    require 'commonFiles/getConnection.php';
+    
     if(isset($_POST['login'])){
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
