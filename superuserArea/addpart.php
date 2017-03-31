@@ -3,10 +3,7 @@ session_start();
 
 if(isset($_SESSION['authenticated']))
 {
-$db = mysqli_connect("localhost", "root", "", "Project_fitness");
-if ($db->connect_error) {
-    die("Connection failed: " . $db ->connect_error);
-}
+require 'commonFiles/getConnection.php';
 if(isset($_POST['submitpart'])){
   $partName = mysqli_real_escape_string($db, $_POST['partName']);
 

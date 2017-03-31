@@ -1,6 +1,6 @@
 <?php
 
-    $db = mysqli_connect("localhost", "root", "", "Project_fitness");
+    require 'commonFiles/getConnection.php';
 
     if(isset($_POST['register'])){
         session_destroy();
@@ -16,7 +16,6 @@
         $datetimenow = mysqli_real_escape_string($db, $tempdatetimenow);
 
         if($password == $password2){
-            echo $password . $password2 . $_POST['gender'];
             $password = md5($password);
             $sql1 = $db->query("INSERT INTO Project_Admin_Details VALUE('$datetimenow', '$email', '$name', '$dob', '$gender')");
             $sql2 = $db->query("INSERT INTO Project_Admin_Login VALUE('$datetimenow', '$email', '$password')");

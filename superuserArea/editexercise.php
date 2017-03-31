@@ -3,11 +3,7 @@ session_start();
 
 if(isset($_SESSION['authenticated']))
 {
-$db = mysqli_connect("localhost", "root", "", "Project_fitness");
-if ($db->connect_error) {
-    die("Connection failed: " . $db ->connect_error);
-}
-
+require 'commonFiles/getConnection.php';
 //to do the editing part.
 if(isset($_POST['confirmEdit'])){
   $exerciseName = mysqli_real_escape_string($db, $_POST['exerciseName']);

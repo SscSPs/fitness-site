@@ -4,10 +4,7 @@ if(!isset($_SESSION['authenticated'])){
   $_SESSION['message'] = "Login First";
   header("location: ./");
 }
-$db = mysqli_connect("localhost", "root", "", "Project_fitness");
-if ($db->connect_error) {
-    die("Connection failed: " . $db ->connect_error);
-}
+require 'commonFiles/getConnection.php';
 /*
 echo '<form action="changeOwnPass.php" method="post">';
 echo '<label for="oldPass" style="width:200px;display: inline-block;">Current Password</label>';

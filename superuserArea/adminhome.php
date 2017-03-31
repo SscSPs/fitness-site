@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect("localhost", "root", "", "Project_fitness");
+require 'commonFiles/getConnection.php';
 session_start();
 
 if(isset($_SESSION['authenticated']))

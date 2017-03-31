@@ -3,9 +3,7 @@ session_start();
 
 if(isset($_SESSION['authenticated']))
 {
-  $db = mysqli_connect("localhost", "root", "", "Project_fitness");
-if ($db->connect_error) {
-    die("Connection failed: " . $db ->connect_error);
+  require 'commonFiles/getConnection.php';
 }
 //fetch list of body parts
 $fetchBodyParts = "SELECT id, name, number_of_exercise FROM project_body_parts";

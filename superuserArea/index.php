@@ -1,6 +1,6 @@
 <?php
-     $db = mysqli_connect("localhost", "root", "", "Project_fitness");
       session_start();
+      require 'commonFiles/getConnection.php';
  if(isset($_SESSION['authenticated'])){
    $_SESSION['message']="You are already logged in, logout to exit.";
   header("Location: ./adminhome.php");
