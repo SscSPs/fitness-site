@@ -1,3 +1,3 @@
 <?php
-echo "Copyright ";
+echo "Copyright Fitness Site 2017 ";
 ?>

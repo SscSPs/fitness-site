@@ -1,5 +1,7 @@
 <?php
-
+  session_start();
+  require 'commonFiles/getConnection.php';
+  
 ?>
 <!DOCTYPE HTML>
 

@@ -1,9 +1,6 @@
 <?php
-$db = mysqli_connect("localhost", "root", "", "Project_fitness");
+require 'commonFiles/getConnection.php';
 
-if ($db->connect_error) {
-	die("Connection failed: " . $db->connect_error);
-}
 
 parse_str($_SERVER['QUERY_STRING']);
 //can receive $filePath as query.

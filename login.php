@@ -2,7 +2,7 @@
     session_start();
     //$_SESSION['message'] = '';  //I done think we nees this...
     require 'commonFiles/getConnection.php';
-    
+
     if(isset($_POST['login'])){
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
@@ -14,7 +14,7 @@
             if($row['verified'] == 1){
               $_SESSION['message'] = "Login Successful";
               $_SESSION['email'] = $email;
-              header("location: /");
+              header("location: /user_access_area/index.php");  //user area needs to be specified.
             }
             else{
               $_SESSION['email'] = $email;
