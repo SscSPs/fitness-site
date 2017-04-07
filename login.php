@@ -1,7 +1,16 @@
 <?php
     session_start();
-    //$_SESSION['message'] = '';  //I done think we nees this...
+    //import some files.
     require 'commonFiles/getConnection.php';
+    require 'commonFiles/inLoggedIn.php';
+
+    //call some functions
+    $isauth = isAuth();
+    if($isauth==1){
+      $_SESSION['message'] = "Already Logged In, Logout first to access this page.";
+      header("location: /Members/index.php");
+    }
+
 
     if(isset($_POST['login'])){
         $email = mysqli_real_escape_string($db, $_POST['email']);
@@ -14,7 +23,8 @@
             if($row['verified'] == 1){
               $_SESSION['message'] = "Login Successful";
               $_SESSION['email'] = $email;
-              header("location: /user_access_area/index.php");  //user area needs to be specified.
+              $_SESSION['auth'] = 1;
+              header("location: /Members/index.php");  //user area needs to be specified.
             }
             else{
               $_SESSION['email'] = $email;
