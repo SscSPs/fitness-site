@@ -1,261 +1,261 @@
 {
-   "part":[
-      {
-         "name":"Chest",
-         "exercises":[
-            {
-               "id":"Barbell Bench Press",
-               "name":"Barbell Bench Press",
-               "info":"the bench press is a great exercise for anyone looking to gain muscle size and strength in the upper body. This exercise is known as a compound exercise, meaning it involves multiple joints, and therefore multiple major muscle groups to execute. The bench press was ranked as the number one chest exercise by the American Council on exercise.",
-               "video":{
-                  "name":"How To: Barbell Bench Press",
-                  "link":"https://www.youtube.com/watch?v=rT7DgCr-3pg"
-               },
-               "instrument":"Flat Bench",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Flat Bench Dumbbell Press",
-               "name":"Flat Bench Dumbbell Press",
-               "info":"The Dumbbell Bench Press is a fantastic movement that when properly performed builds the chest muscles. The Dumbbell Bench Press is a great chest exercise because it can be performed using various angles to develop every part of the chest muscle. The Dumbbell Bench Press is also a fantastic chest exercise because it allows for great freedom of motion and as such engages many supporting muscles that further stimulate optimal chest development. ",
-               "video":{
-                  "name":"How To: Dumbbell Chest Press ",
-                  "link":"https://www.youtube.com/watch?v=VmB1G1K7v94"
-               },
-               "instrument":"Flat Bench",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Incline Barbell Bench Press",
-               "name":"Incline Barbell Bench Press",
-               "info":"The incline bench press is a strength-training move to build your chest and fronts of the shoulders. Incline chest press machines that simulate the movement in a fixed plane are another way to perform the move. The incline press is one of several exercises that help create symmetry and strength in the muscles of the upper body.",
-               "video":{
-                  "name":"How to Do an Incline Bench Press | Chest Workout ",
-                  "link":"https://www.youtube.com/watch?v=dtNXLavPFo0"
-               },
-               "instrument":"Incline Bench",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Decline Bench Dumbbell Press",
-               "name":"Decline Bench Dumbbell Press",
-               "info":"Turning the dumbbell bench press upside-down, literally, might be just what you need to kick up your chest routine. The lower portion of your chest gets more stimulation, while working with a dumbbell, as opposed to a barbell, provides balance between the sides of your body. Your shoulders and triceps also benefit from the decline dumbbell press.",
-               "video":{
-                  "name":"Chest & Back Exercises: Upper Body Workout : Dumbell Decline Bench Press for Your Chest Workout ",
-                  "link":"https://www.youtube.com/watch?v=e3tn_Ta-KOU"
-               },
-               "instrument":"Decline Bench",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"PushUps",
-               "name":"Push Ups",
-               "info":"Push-ups are basic strength-building total body exercises that strengthen the upper body and improve the core strength. Several muscle groups in the chest, arms, shoulder, triceps, back, and neck work simultaneously during a push-up. Push-ups are performed in a prone position, which can help develop a good posture. ",
-               "video":{
-                  "name":"How to Do a Push Up Correctly",
-                  "link":"https://www.youtube.com/watch?v=Eh00_rniF8E"
-               },
-               "instrument":"none",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Incline Bench Dumbbell Press",
-               "name":"Incline Bench Dumbbell Press",
-               "info":"The incline bench press is a strength-training move to build your chest and fronts of the shoulders. Incline chest press machines that simulate the movement in a fixed plane are another way to perform the move. The incline press is one of several exercises that help create symmetry and strength in the muscles of the upper body.",
-               "video":{
-                  "name":"How to Do Incline Dumbbell Bench Press | Chest Workout ",
-                  "link":"https://www.youtube.com/watch?v=07Bcqtib4FM"
-               },
-               "instrument":"Incline Bench",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Decline Barbell Bench Press",
-               "name":"Decline Barbell Bench Press",
-               "info":"decline bench press, your body lies on a slope, with your legs higher than your head. Because the angle of your arms is lower relative to your torso than in a standard bench press, the decline bench press primarily targets the lower part of your chest, or pectoral, muscles. The exercise also works your triceps and anterior deltoid muscles..",
-               "video":{
-                  "name":"How To: Barbell Decline Bench Press ",
-                  "link":"https://www.youtube.com/watch?v=LfyQBUKR8SE"
-               },
-               "instrument":"Decline Bench",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Butterfly or Pec-Deck Machine ",
-               "name":"Butterfly or Pec-Deck Machine",
-               "info":"The chest area includes the pec muscles (pectoralis major and minor), and when you do a chest fly, you also use other muscles such as the deltoids to help stabilize the movement. It is a great move to shape and strengthen your chest area (which in turn helps alleviate back problems!)",
-               "video":{
-                  "name":"How to Do Pec Deck Butterflies ",
-                  "link":"https://www.youtube.com/watch?v=Qr7dstCeYtw"
-               },
-               "instrument":"Butterfly or Pec-Deck Machine",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Dips For Chest",
-               "name":"Dips For Chest",
-               "info":"One of the best exercises you can perform to build the chest, triceps and shoulders, parallel bar dips train these muscles in a completely different angle and range of motion than push-ups and bench pressing",
-               "video":{
-                  "name":"How To Do Dips - Chest & Triceps Exercise ",
-                  "link":"https://www.youtube.com/watch?v=wjUmnZH528Y"
-               },
-               "instrument":"parallel bars",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Pull-Over",
-               "name":"Pull-Over",
-               "info":"The Dumbbell Pullover is an advanced movement that when performed properly will hit the chest at a different angles and employ muscle fibers not normally recruited standard chest building movements such as the bench press, Pec Deck and flyes. The Dumbbell Pullover when done properly also  help expand your rib cage. Employing the Dumbbell Pullover as part of your chest workout will aid in the full development of your chest pectorals. ",
-               "video":{
-                  "name":"How to Do a Dumbbell Pullover | Back Workout ",
-                  "link":"https://www.youtube.com/watch?v=zUVzVXMh9Nc"
-               },
-               "instrument":"Flat Bench",
-               "moreinfo":"nothing"
-            }
-         ]
-      },
-      {
-         "name":"SHOULDER",
-         "exercises":[
-            {
-               "id":" Barbell Push Press",
-               "name":"Barbell Push Press",
-               "info":"One of the most effective way to build muscle and power is PUSH PRESS. The push press calls on the calves, quads, core, deltoids, and triceps as prime movers and a host of other muscles that stabilize and assist. Contrary to the grinding reps of heavy strict overhead presses, this lift is explosive and classified as a “quick lift”.",
-               "video":{
-                  "name":"Exercise Demo: Barbell Push Press",
-                  "link":"https://www.youtube.com/watch?v=DFgD99zh028"
-               },
-               "instrument":"barbell and weights",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Standing Military Press ",
-               "name":"Standing Military Press ",
-               "info":"This is essentially a push press without the extra bit of body English generated through your legs. That makes it a better isolation movement, but this movement still isn't considered an isolation exercise. In fact, it's a highly demanding multijoint overhead press that, because it's not seated, still allows for a bit of momentum as well as increased muscle activation ",
-               "video":{
-                  "name":"Standing Military Press - Shoulder Exercise - Bodybuilding.com ",
-                  "link":"https://www.youtube.com/watch?v=8E4oWpi0RkA"
-               },
-               "instrument":"barbell and weights",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Arnold Press",
-               "name":"Arnold Press",
-               "info":"Arnold Dumbbell Presses are a slightly awkward exercise, but it is very beneficial because it hits the front and side heads of your delts. Arnold Presses, shoulder press variation, shows how you can work the different heads of the deltoids and get some unique muscle building benefits.",
-               "video":{
-                  "name":"Arnold Press ",
-                  "link":"https://www.youtube.com/watch?v=odhXwoS3mDA"
-               },
-               "instrument":"Dumbells and bench to sit",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Dumbbell Lateral Raise",
-               "name":"Dumbbell Lateral Raise",
-               "info":"The dumbbell lateral raise enhances your physique's appearance by creating size contrasts between your shoulders, waist and hips. The exercise has the same effect as wearing shoulder pads on a blouse or jacket. By making your shoulders appear wider, your waist and hips appear slimmer. The dumbbell lateral raise also works the muscles that support and stabilize your shoulders.",
-               "video":{
-                  "name":"How To: Dumbbell Side Lateral Raise ",
-                  "link":"https://www.youtube.com/watch?v=3VcKaXpzqRo"
-               },
-               "instrument":"Dumbbells",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Front Dumbbell Raise",
-               "name":"Front Dumbbell Raise",
-               "info":"People looking to just maintain strength might perform only five or six basic exercises to achieve their goal. The front raise is an exercise that fits into any workout and it involves the upper body musculature.",
-               "video":{
-                  "name":"How To: Dumbbell Front Raise ",
-                  "link":"https://www.youtube.com/watch?v=-t7fuZ0KhDA"
-               },
-               "instrument":"Dumbbells",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Upright Row",
-               "name":"Upright Row",
-               "info":"Enter the upright row—a seriously efficient move that targets your side deltoids and trapezius muscles as its prime movers as well as your front delts, rhomboids, and teres minor as synergists. By adding this lift to your repertoire, you’ll nail the majority of your shoulder and upper back muscles with one underutilized compound movement.",
-               "video":{
-                  "name":"How To: Barbell Upright Row ",
-                  "link":"https://www.youtube.com/watch?v=amCU-ziHITM"
-               },
-               "instrument":"over head bar",
-               "moreinfo":"nothing"
-            }
-         ]
-      },
-      {
-         "name":"BICEPS",
-         "exercises":[
-            {
-               "id":"Dumbbell Curl",
-               "name":"Dumbbell Curl",
-               "info":"The biceps curl is an exercise for the elbow flexors, which comprise the biceps brachii, brachialis and brachioradialis. You can emphasize each of these muscles by using a variety of grips. It is best to do biceps curls using dumbbells to ensure the elbow flexors of each arm are being worked to the same extent. Also, when you use dumbbells, it is best you do the biceps curls unilaterally, meaning one side at a time. By doing so, you can focus on one side at a time and better stimulate the muscles.",
-               "video":{
-                  "name":"How To: Alternating Dumbbell Curl ",
-                  "link":"https://www.youtube.com/watch?v=sAq_ocpRh_I"
-               },
-               "instrument":"Dumbbells",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Dumbbell Hammer Curl ",
-               "name":"Dumbbell Hammer Curl ",
-               "info":"Build Bigger Bicep Peak With Dumbbell Hammer Curls On The Preacher Bench. When it comes to building bicep peak 2 of the best exercises you can use are the Hammer Curl and the Preacher Curl. Hammer Curls help work the brachialis, which is that “bump” of a muscle that's between the biceps and triceps”.",
-               "video":{
-                  "name":"How To: Dumbbell Hammer Curl ",
-                  "link":"https://www.youtube.com/watch?v=zC3nLlEvin4"
-               },
-               "instrument":"Dumbbells",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Barbell curl",
-               "name":"Barbell curl",
-               "info":"A barbell curl is a pull-type, isolation exercise which works primarily your biceps, but also trains muscles in your forearms and shoulders to some degree, as well. ”.",
-               "video":{
-                  "name":"How To: Straight-Bar Bicep Curl ",
-                  "link":"https://www.youtube.com/watch?v=sAq_ocpRh_I"
-               },
-               "instrument":"Barbell + weights",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Concentration curls",
-               "name":"Concentration curls",
-               "info":"Concentration curls use dumbbells to isolate the biceps, concentrating the workload on the lateral head of the biceps brachii and brachialis (the outer bicep).Concentration curls are often used towards the end of a workout to get a real ‘pump’ in the biceps”.",
-               "video":{
-                  "name":"How To: Dumbbell Concentration Curl ",
-                  "link":"https://www.youtube.com/watch?v=Jvj2wV0vOYU"
-               },
-               "instrument":"Dumbbells",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Close-Grip Chin-Up",
-               "name":"Close-Grip Chin-Up",
-               "info":"The movement also requires a hefty dose of biceps strength to bend your elbows as you hoist your bodyweight. Turning your grip so your palms face you in a shoulder-width or closer grip and using a full range of motion really hits the biceps brachii.”.",
-               "video":{
-                  "name":"Best Exercise For Bigger Biceps Fast = Close Grip Chin-ups ",
-                  "link":"https://www.youtube.com/watch?v=6bTcFTRoqcw"
-               },
-               "instrument":"overhead bar ",
-               "moreinfo":"nothing"
-            },
-            {
-               "id":"Standing Cable Curl",
-               "name":"Standing Cable Curl",
-               "info":"Area Targeted: Biceps brachii, with brachialis activation using a rope.",
-               "video":{
-                  "name":"How To: Standing Cable Double-Bicep Curl",
-                  "link":"https://www.youtube.com/watch?v=L9GwtjwAM8Y"
-               },
-               "instrument":"a cable and your choice of attachment",
-               "moreinfo":"nothing"
-            }
-         ]
-      }
-   ]
+	"part":[
+		{
+			"name":"Chest",
+			"exercises":[
+				{
+					"id":"Barbell Bench Press",
+					"name":"Barbell Bench Press",
+					"info":"the bench press is a great exercise for anyone looking to gain muscle size and strength in the upper body. This exercise is known as a compound exercise, meaning it involves multiple joints, and therefore multiple major muscle groups to execute. The bench press was ranked as the number one chest exercise by the American Council on exercise.",
+					"video":{
+						"name":"How To: Barbell Bench Press",
+						"link":"https://www.youtube.com/watch?v=rT7DgCr-3pg"
+					},
+					"instrument":"Flat Bench",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Flat Bench Dumbbell Press",
+					"name":"Flat Bench Dumbbell Press",
+					"info":"The Dumbbell Bench Press is a fantastic movement that when properly performed builds the chest muscles. The Dumbbell Bench Press is a great chest exercise because it can be performed using various angles to develop every part of the chest muscle. The Dumbbell Bench Press is also a fantastic chest exercise because it allows for great freedom of motion and as such engages many supporting muscles that further stimulate optimal chest development. ",
+					"video":{
+						"name":"How To: Dumbbell Chest Press ",
+						"link":"https://www.youtube.com/watch?v=VmB1G1K7v94"
+					},
+					"instrument":"Flat Bench",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Incline Barbell Bench Press",
+					"name":"Incline Barbell Bench Press",
+					"info":"The incline bench press is a strength-training move to build your chest and fronts of the shoulders. Incline chest press machines that simulate the movement in a fixed plane are another way to perform the move. The incline press is one of several exercises that help create symmetry and strength in the muscles of the upper body.",
+					"video":{
+						"name":"How to Do an Incline Bench Press | Chest Workout ",
+						"link":"https://www.youtube.com/watch?v=dtNXLavPFo0"
+					},
+					"instrument":"Incline Bench",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Decline Bench Dumbbell Press",
+					"name":"Decline Bench Dumbbell Press",
+					"info":"Turning the dumbbell bench press upside-down, literally, might be just what you need to kick up your chest routine. The lower portion of your chest gets more stimulation, while working with a dumbbell, as opposed to a barbell, provides balance between the sides of your body. Your shoulders and triceps also benefit from the decline dumbbell press.",
+					"video":{
+						"name":"Chest & Back Exercises: Upper Body Workout : Dumbell Decline Bench Press for Your Chest Workout ",
+						"link":"https://www.youtube.com/watch?v=e3tn_Ta-KOU"
+					},
+					"instrument":"Decline Bench",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"PushUps",
+					"name":"Push Ups",
+					"info":"Push-ups are basic strength-building total body exercises that strengthen the upper body and improve the core strength. Several muscle groups in the chest, arms, shoulder, triceps, back, and neck work simultaneously during a push-up. Push-ups are performed in a prone position, which can help develop a good posture. ",
+					"video":{
+						"name":"How to Do a Push Up Correctly",
+						"link":"https://www.youtube.com/watch?v=Eh00_rniF8E"
+					},
+					"instrument":"none",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Incline Bench Dumbbell Press",
+					"name":"Incline Bench Dumbbell Press",
+					"info":"The incline bench press is a strength-training move to build your chest and fronts of the shoulders. Incline chest press machines that simulate the movement in a fixed plane are another way to perform the move. The incline press is one of several exercises that help create symmetry and strength in the muscles of the upper body.",
+					"video":{
+						"name":"How to Do Incline Dumbbell Bench Press | Chest Workout ",
+						"link":"https://www.youtube.com/watch?v=07Bcqtib4FM"
+					},
+					"instrument":"Incline Bench",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Decline Barbell Bench Press",
+					"name":"Decline Barbell Bench Press",
+					"info":"decline bench press, your body lies on a slope, with your legs higher than your head. Because the angle of your arms is lower relative to your torso than in a standard bench press, the decline bench press primarily targets the lower part of your chest, or pectoral, muscles. The exercise also works your triceps and anterior deltoid muscles..",
+					"video":{
+						"name":"How To: Barbell Decline Bench Press ",
+						"link":"https://www.youtube.com/watch?v=LfyQBUKR8SE"
+					},
+					"instrument":"Decline Bench",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Butterfly or Pec-Deck Machine ",
+					"name":"Butterfly or Pec-Deck Machine",
+					"info":"The chest area includes the pec muscles (pectoralis major and minor), and when you do a chest fly, you also use other muscles such as the deltoids to help stabilize the movement. It is a great move to shape and strengthen your chest area (which in turn helps alleviate back problems!)",
+					"video":{
+						"name":"How to Do Pec Deck Butterflies ",
+						"link":"https://www.youtube.com/watch?v=Qr7dstCeYtw"
+					},
+					"instrument":"Butterfly or Pec-Deck Machine",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Dips For Chest",
+					"name":"Dips For Chest",
+					"info":"One of the best exercises you can perform to build the chest, triceps and shoulders, parallel bar dips train these muscles in a completely different angle and range of motion than push-ups and bench pressing",
+					"video":{
+						"name":"How To Do Dips - Chest & Triceps Exercise ",
+						"link":"https://www.youtube.com/watch?v=wjUmnZH528Y"
+					},
+					"instrument":"parallel bars",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Pull-Over",
+					"name":"Pull-Over",
+					"info":"The Dumbbell Pullover is an advanced movement that when performed properly will hit the chest at a different angles and employ muscle fibers not normally recruited standard chest building movements such as the bench press, Pec Deck and flyes. The Dumbbell Pullover when done properly also	help expand your rib cage. Employing the Dumbbell Pullover as part of your chest workout will aid in the full development of your chest pectorals. ",
+					"video":{
+						"name":"How to Do a Dumbbell Pullover | Back Workout ",
+						"link":"https://www.youtube.com/watch?v=zUVzVXMh9Nc"
+					},
+					"instrument":"Flat Bench",
+					"moreinfo":"nothing"
+				}
+			]
+		},
+		{
+			"name":"SHOULDER",
+			"exercises":[
+				{
+					"id":" Barbell Push Press",
+					"name":"Barbell Push Press",
+					"info":"One of the most effective way to build muscle and power is PUSH PRESS. The push press calls on the calves, quads, core, deltoids, and triceps as prime movers and a host of other muscles that stabilize and assist. Contrary to the grinding reps of heavy strict overhead presses, this lift is explosive and classified as a “quick lift”.",
+					"video":{
+						"name":"Exercise Demo: Barbell Push Press",
+						"link":"https://www.youtube.com/watch?v=DFgD99zh028"
+					},
+					"instrument":"barbell and weights",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Standing Military Press ",
+					"name":"Standing Military Press ",
+					"info":"This is essentially a push press without the extra bit of body English generated through your legs. That makes it a better isolation movement, but this movement still isn't considered an isolation exercise. In fact, it's a highly demanding multijoint overhead press that, because it's not seated, still allows for a bit of momentum as well as increased muscle activation ",
+					"video":{
+						"name":"Standing Military Press - Shoulder Exercise - Bodybuilding.com ",
+						"link":"https://www.youtube.com/watch?v=8E4oWpi0RkA"
+					},
+					"instrument":"barbell and weights",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Arnold Press",
+					"name":"Arnold Press",
+					"info":"Arnold Dumbbell Presses are a slightly awkward exercise, but it is very beneficial because it hits the front and side heads of your delts. Arnold Presses, shoulder press variation, shows how you can work the different heads of the deltoids and get some unique muscle building benefits.",
+					"video":{
+						"name":"Arnold Press ",
+						"link":"https://www.youtube.com/watch?v=odhXwoS3mDA"
+					},
+					"instrument":"Dumbells and bench to sit",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Dumbbell Lateral Raise",
+					"name":"Dumbbell Lateral Raise",
+					"info":"The dumbbell lateral raise enhances your physique's appearance by creating size contrasts between your shoulders, waist and hips. The exercise has the same effect as wearing shoulder pads on a blouse or jacket. By making your shoulders appear wider, your waist and hips appear slimmer. The dumbbell lateral raise also works the muscles that support and stabilize your shoulders.",
+					"video":{
+						"name":"How To: Dumbbell Side Lateral Raise ",
+						"link":"https://www.youtube.com/watch?v=3VcKaXpzqRo"
+					},
+					"instrument":"Dumbbells",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Front Dumbbell Raise",
+					"name":"Front Dumbbell Raise",
+					"info":"People looking to just maintain strength might perform only five or six basic exercises to achieve their goal. The front raise is an exercise that fits into any workout and it involves the upper body musculature.",
+					"video":{
+						"name":"How To: Dumbbell Front Raise ",
+						"link":"https://www.youtube.com/watch?v=-t7fuZ0KhDA"
+					},
+					"instrument":"Dumbbells",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Upright Row",
+					"name":"Upright Row",
+					"info":"Enter the upright row—a seriously efficient move that targets your side deltoids and trapezius muscles as its prime movers as well as your front delts, rhomboids, and teres minor as synergists. By adding this lift to your repertoire, you’ll nail the majority of your shoulder and upper back muscles with one underutilized compound movement.",
+					"video":{
+						"name":"How To: Barbell Upright Row ",
+						"link":"https://www.youtube.com/watch?v=amCU-ziHITM"
+					},
+					"instrument":"over head bar",
+					"moreinfo":"nothing"
+				}
+			]
+		},
+		{
+			"name":"BICEPS",
+			"exercises":[
+				{
+					"id":"Dumbbell Curl",
+					"name":"Dumbbell Curl",
+					"info":"The biceps curl is an exercise for the elbow flexors, which comprise the biceps brachii, brachialis and brachioradialis. You can emphasize each of these muscles by using a variety of grips. It is best to do biceps curls using dumbbells to ensure the elbow flexors of each arm are being worked to the same extent. Also, when you use dumbbells, it is best you do the biceps curls unilaterally, meaning one side at a time. By doing so, you can focus on one side at a time and better stimulate the muscles.",
+					"video":{
+						"name":"How To: Alternating Dumbbell Curl ",
+						"link":"https://www.youtube.com/watch?v=sAq_ocpRh_I"
+					},
+					"instrument":"Dumbbells",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Dumbbell Hammer Curl ",
+					"name":"Dumbbell Hammer Curl ",
+					"info":"Build Bigger Bicep Peak With Dumbbell Hammer Curls On The Preacher Bench. When it comes to building bicep peak 2 of the best exercises you can use are the Hammer Curl and the Preacher Curl. Hammer Curls help work the brachialis, which is that “bump” of a muscle that's between the biceps and triceps”.",
+					"video":{
+						"name":"How To: Dumbbell Hammer Curl ",
+						"link":"https://www.youtube.com/watch?v=zC3nLlEvin4"
+					},
+					"instrument":"Dumbbells",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Barbell curl",
+					"name":"Barbell curl",
+					"info":"A barbell curl is a pull-type, isolation exercise which works primarily your biceps, but also trains muscles in your forearms and shoulders to some degree, as well. ”.",
+					"video":{
+						"name":"How To: Straight-Bar Bicep Curl ",
+						"link":"https://www.youtube.com/watch?v=sAq_ocpRh_I"
+					},
+					"instrument":"Barbell + weights",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Concentration curls",
+					"name":"Concentration curls",
+					"info":"Concentration curls use dumbbells to isolate the biceps, concentrating the workload on the lateral head of the biceps brachii and brachialis (the outer bicep).Concentration curls are often used towards the end of a workout to get a real ‘pump’ in the biceps”.",
+					"video":{
+						"name":"How To: Dumbbell Concentration Curl ",
+						"link":"https://www.youtube.com/watch?v=Jvj2wV0vOYU"
+					},
+					"instrument":"Dumbbells",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Close-Grip Chin-Up",
+					"name":"Close-Grip Chin-Up",
+					"info":"The movement also requires a hefty dose of biceps strength to bend your elbows as you hoist your bodyweight. Turning your grip so your palms face you in a shoulder-width or closer grip and using a full range of motion really hits the biceps brachii.”.",
+					"video":{
+						"name":"Best Exercise For Bigger Biceps Fast = Close Grip Chin-ups ",
+						"link":"https://www.youtube.com/watch?v=6bTcFTRoqcw"
+					},
+					"instrument":"overhead bar ",
+					"moreinfo":"nothing"
+				},
+				{
+					"id":"Standing Cable Curl",
+					"name":"Standing Cable Curl",
+					"info":"Area Targeted: Biceps brachii, with brachialis activation using a rope.",
+					"video":{
+						"name":"How To: Standing Cable Double-Bicep Curl",
+						"link":"https://www.youtube.com/watch?v=L9GwtjwAM8Y"
+					},
+					"instrument":"a cable and your choice of attachment",
+					"moreinfo":"nothing"
+				}
+		 ]
+		}
+	]
 }

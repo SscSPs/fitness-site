@@ -6,10 +6,10 @@ parse_str($_SERVER['QUERY_STRING']);
 //can receive $filePath as query.
 
 if(isset($filePath)){
-  $str = file_get_contents($filePath, FILE_USE_INCLUDE_PATH); //taken from query this path to json file with data.
+	$str = file_get_contents($filePath, FILE_USE_INCLUDE_PATH); //taken from query this path to json file with data.
 }
 else{
-  $str = file_get_contents('/json/exercises.json', FILE_USE_INCLUDE_PATH); //default path to json file with data.
+	$str = file_get_contents('/json/exercises.json', FILE_USE_INCLUDE_PATH); //default path to json file with data.
 }
 
 $partInserted = 0;

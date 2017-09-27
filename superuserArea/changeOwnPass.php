@@ -1,8 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['authenticated'])){
-  $_SESSION['message'] = "Login First";
-  header("location: ./");
+	$_SESSION['message'] = "Login First";
+	header("location: ./");
 }
 require 'commonFiles/getConnection.php';
 
@@ -17,30 +17,30 @@ echo '<input type="submit" name="changeSelf" value="Change Password" />';
 echo '</form>';
 
 if(isset($_POST['changeSelf'])){
-  $oldpass = md5($_POST['oldPass']);
-  if($_POST['newPass1'] == $_POST['newPass2']){
-    $newPass = md5($_POST['newPass1']);
+	$oldpass = md5($_POST['oldPass']);
+	if($_POST['newPass1'] == $_POST['newPass2']){
+		$newPass = md5($_POST['newPass1']);
 
-    $email = $_SESSION['email'];
-    $checkExercise = "SELECT * FROM project_admin_login where email = '$email' and passhash = '$oldpass' limit 1";
-    $result2 = $db->query($checkExercise);
-    if ($result2->num_rows == 1) {
-      $changePass = "UPDATE project_admin_login set passhash = '$newPass' WHERE email = '$email'";
-      $changePassResult = $db->query($bodypartupdate);
-      if($bodypartresult === TRUE){
-        echo "Update Successful <br>";
-      }
-      else echo "some error occured on updating password, the old one is not changed.";
-    }
-    else{
-      echo "Current password is wrong. Try again";
-    }
-  }
-  else{
-    echo "New passwords do not match. Fix that.";
-  }
+		$email = $_SESSION['email'];
+		$checkExercise = "SELECT * FROM project_admin_login where email = '$email' and passhash = '$oldpass' limit 1";
+		$result2 = $db->query($checkExercise);
+		if ($result2->num_rows == 1) {
+			$changePass = "UPDATE project_admin_login set passhash = '$newPass' WHERE email = '$email'";
+			$changePassResult = $db->query($bodypartupdate);
+			if($bodypartresult === TRUE){
+				echo "Update Successful <br>";
+			}
+			else echo "some error occured on updating password, the old one is not changed.";
+		}
+		else{
+			echo "Current password is wrong. Try again";
+		}
+	}
+	else{
+		echo "New passwords do not match. Fix that.";
+	}
 }
 
 
 
- ?>
+?>

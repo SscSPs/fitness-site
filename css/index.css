@@ -1,63 +1,63 @@
 header {
-    color: white;
-    text-align: left;
-    background: url("/images/headerBG.jpg");
-    background-position: center;
-    background-size: cover;
-    padding: 10px 0px 0px 0px;
-    margin: 0px;
+	color: white;
+	text-align: left;
+	background: url("/images/headerBG.jpg");
+	background-position: center;
+	background-size: cover;
+	padding: 10px 0px 0px 0px;
+	margin: 0px;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-    padding-left: 20px;
-    font-size: 40px;
-    padding-bottom: 30px;
+	padding-left: 20px;
+	font-size: 40px;
+	padding-bottom: 30px;
 }
 
 li {
-    font-size: 22px;
-    padding: 10px;
-    display: inline;
+	font-size: 22px;
+	padding: 10px;
+	display: inline;
 }
 
 li:hover {
-    background: red;
+	background: red;
 }
 
 ul {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .info {
-    text-align: left;
-    height: 200px;
-    width: 300px;
+	text-align: left;
+	height: 200px;
+	width: 300px;
 }
 
 #info_head {
-    color: coral;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    font-size: 30px;
+	color: coral;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	font-size: 30px;
 }
 
 #butt {
-    color: black;
-    padding: 10px 40px 10px 40px;
-    background-color: coral;
-    border-color: coral;
-    border-radius: 2px;
-    border-width: 1px;
-    border-style: solid;
+	color: black;
+	padding: 10px 40px 10px 40px;
+	background-color: coral;
+	border-color: coral;
+	border-radius: 2px;
+	border-width: 1px;
+	border-style: solid;
 }
 
 .bigContact li li:hover{
@@ -66,16 +66,16 @@ background: #ffffff;
 }
 
 td{
-    padding-bottom: 5px;
-}            
+	padding-bottom: 5px;
+}
 
 .butt{
-    padding-top: 15px;
+	padding-top: 15px;
 }
 
 .sub_head{
-    font-size: 40px;
-    color: coral;
-    padding-bottom: 20px;
-    padding-top: 20px;
+	font-size: 40px;
+	color: coral;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
