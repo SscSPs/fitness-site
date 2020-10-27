@@ -14,7 +14,7 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="/css/index.css" rel="stylesheet">
-		<title>Workout Calendar - Fitness Central</title>
+		<title>Workout Calendar : Fitness Central</title>
 
 		<style>
 			table{
@@ -60,7 +60,9 @@
 				{
 					echo "loadHeaderRegistered('header1');";
 				}
-				else echo "loadHeader('header1');";
+				else {	
+					echo "loadHeader('header1');"
+				}
 			?>
 
 		</script>

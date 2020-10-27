@@ -60,7 +60,7 @@ $mailsent = $mail->send();
 			}
 			?>
 
-				<p><a href="/login.php">Click here</a> to go to the Login Page.</p>
+				<p><a href="/login.php">Click here</a> to go to Login Page.</p>
 			</center>
 		</div>
 

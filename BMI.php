@@ -46,13 +46,6 @@
 						<td colspan="2" class="butt"><input type="submit" value="Calculate" style="height: 40px; width: 170px;" onclick="bmi_calc()"></td>
 					</tr>
 
-			<!--Weight: <input type = "text" style="width: 250px; margin-left: 10px;" id = "weight" placeholder="in kg"><br>
-			<br>
-			Height: <input type = "text" style="width: 100px; margin-left: 12px; margin-right: 45px;" id = "m_height" placeholder="in meters"><input type = "text" style="width: 100px;" id = "cm_height" placeholder="in centimeters"><br>
-			<br><br>
-			<input type="button" value="Calculate" style="height: 40px; width: 100px;" onclick="bmi_calc()"><br>
-			<br>
-			-->
 				</table>
 			</center>
 		</div>
