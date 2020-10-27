@@ -29,7 +29,7 @@
 		</header>
 
 		<?php
-			if(isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['message'];
+			if (isset($_SESSION['email'])) echo "Logged in as: ".$_SESSION['message'];
 		?>
 
 		<H1>Hey there!</H1>
@@ -43,7 +43,9 @@
 				{
 					echo "loadHeaderRegistered('header1');";
 				}
-				else echo "loadHeader('header1');";
+				else {
+					echo "loadHeader('header1');";
+				}
 			?>
 		</script>
 	</body>
