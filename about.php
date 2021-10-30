@@ -23,7 +23,7 @@
 	</head>
 
 	<body>
-		<!-- header area with navigation bar and the background image and name of the website
+		<!-- this is the header area with navigation bar and the background image and name of the website
 			Will be loaded by JS-->
 		<header id='header1'>
 		</header>
